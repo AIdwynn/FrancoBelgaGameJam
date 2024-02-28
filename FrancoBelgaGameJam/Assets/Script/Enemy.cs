@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
     #region UnityMethods
     private void Awake()
     {
-        _player =
+        //_player =
 
     }
     private void OnEnable()
