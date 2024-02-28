@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Turn Settings")]
     [SerializeField] float maxPlayerDistance;
-    [SerializeField] float maxEnemyDistance;
     [SerializeField] int startIndex;
     [SerializeField] List<Turn> turns = new List<Turn>();
     int currentTurnIndex;
@@ -25,7 +24,6 @@ public class GameManager : MonoBehaviour
     #region Accessors
     public Turn CurrentTurn { get { return currentTurn; } }
     public float MaxPlayerDistance { get { return maxPlayerDistance; } }
-    public float MaxEnemyDistance { get { return maxEnemyDistance; } }
 
     [HideInInspector] public PlayerController Player;
     #endregion
@@ -38,7 +36,9 @@ public class GameManager : MonoBehaviour
         else
             Destroy(this);
 
-        GameObject player = FindObjectOfType<PlayerController>().gameObject;
+        //var player = FindObjectOfType<PlayerController>().gameObject;
+
+        GameObject player = null;
 
         if (player == null)
             player = Instantiate((GameObject)Resources.Load("Essentials/PlayerController"));

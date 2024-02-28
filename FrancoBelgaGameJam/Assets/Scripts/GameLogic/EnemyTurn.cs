@@ -10,6 +10,10 @@ public class EnemyTurn : Turn
     private void Start()
     {
         GetAllEnemies();
+        foreach (Enemy enemy in _enemies)
+        {
+            enemy.OnStop += () => CheckForAllEnemies();
+        }
     }
 
     private void GetAllEnemies()
@@ -33,5 +37,25 @@ public class EnemyTurn : Turn
     public override void FixedUpdateTurn()
     {
 
+    }
+
+    public void CheckForAllEnemies()
+    {
+        bool canEnd = true;
+
+        foreach(Enemy enemy in _enemies)
+        {
+            if (enemy.IsMoving)
+            {
+                canEnd = false;
+                break;
+            }
+
+        }
+
+        if (canEnd)
+        {
+            GameManager.EndTurn();
+        }
     }
 }

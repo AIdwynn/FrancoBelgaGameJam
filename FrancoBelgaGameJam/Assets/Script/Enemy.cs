@@ -15,8 +15,10 @@ public class Enemy : MonoBehaviour
     private Transform _player;   
     private float _distanceTraveled;
     private float _previousRemainingDistance;
+    public Action OnStop;
 
     public bool IsStunned {  get; set; }
+    public bool IsMoving { get { return !_agent.isStopped; }  }    
 
     public void Activate()
     {
@@ -54,6 +56,7 @@ public class Enemy : MonoBehaviour
         }
 
         _agent.isStopped = true;
+        OnStop?.Invoke();
     }
 
     private void CheckAttackState()
