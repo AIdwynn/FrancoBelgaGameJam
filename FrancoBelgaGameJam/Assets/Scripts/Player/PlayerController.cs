@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
 
         animator.SetBool("Moving", move.magnitude > 0);
+        animator.SetFloat("MoveDir", Mathf.Sign(ZInput));
     }
 
     private void Gravity()
