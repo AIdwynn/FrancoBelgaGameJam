@@ -22,7 +22,7 @@ namespace FrancoGameJam.Genration
         {
             get
             {
-                 var _spawnChances = new int[_areas.Length + 1];
+                 var _spawnChances = new int[_areas.Length];
                 _spawnChances[0] = _areas[0].SpawnChance;
                 for (int i = 1; i < _areas.Length; i++)
                 {

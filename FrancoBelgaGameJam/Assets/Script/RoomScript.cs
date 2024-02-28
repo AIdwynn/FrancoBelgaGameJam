@@ -8,7 +8,7 @@ namespace FrancoGameJam.Genration
     {
         [SerializeField] private Transform _startPoint;
         [SerializeField] private Transform[] _endPoint;
-        [SerializeField] private float _size;
+        [SerializeField] private Vector2 _size;
         
         public Transform StartPoint
         {
@@ -22,15 +22,15 @@ namespace FrancoGameJam.Genration
             private set { _endPoint = value; }
         }
 
-        public float Size
+        public Vector2 Size
         {
             get { return _size; }
             private set { _size = value; }
         }
 
-        public Vector3 Offset
+        public float Offset
         {
-            get { return this.transform.transform.position - _startPoint.position; }
+            get { return (_startPoint.position - this.transform.transform.position).magnitude; }
         }
 
     }
