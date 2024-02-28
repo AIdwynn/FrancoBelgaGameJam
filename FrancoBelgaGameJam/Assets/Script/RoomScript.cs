@@ -2,10 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomScript : MonoBehaviour
+namespace FrancoGameJam.Genration
 {
-    [SerializeField] private Transform StartPoint;
-    [SerializeField] private Transform[] EndPoint;
-    
-    
+    public class RoomScript : MonoBehaviour
+    {
+        [SerializeField] private Transform _startPoint;
+        [SerializeField] private Transform[] _endPoint;
+        [SerializeField] private float _size;
+        
+        public Transform StartPoint
+        {
+            get { return _startPoint; }
+            private set { _startPoint = value; }
+        }
+
+        public Transform[] EndPoint
+        {
+            get { return _endPoint; }
+            private set { _endPoint = value; }
+        }
+
+        public float Size
+        {
+            get { return _size; }
+            private set { _size = value; }
+        }
+
+        public Vector3 Offset
+        {
+            get { return this.transform.transform.position - _startPoint.position; }
+        }
+
+    }
 }
