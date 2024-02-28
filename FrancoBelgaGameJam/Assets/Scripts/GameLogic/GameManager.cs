@@ -7,7 +7,12 @@ public class GameManager : MonoBehaviour
     #region Variables
     public static GameManager Instance;
 
+    [Header("Difficulty")]
+    public bool EasyMode;
+
     [Header("Turn Settings")]
+    [SerializeField] float maxPlayerDistance;
+    [SerializeField] float maxEnemyDistance;
     [SerializeField] int startIndex;
     [SerializeField] List<Turn> turns = new List<Turn>();
     int currentTurnIndex;
@@ -19,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     #region Accessors
     public Turn CurrentTurn { get { return currentTurn; } }
+    public float MaxPlayerDistance { get { return maxPlayerDistance; } }
+    public float MaxEnemyDistance { get { return maxEnemyDistance; } }
+
     [HideInInspector] public PlayerController Player;
     #endregion
 
@@ -30,7 +38,10 @@ public class GameManager : MonoBehaviour
         else
             Destroy(this);
 
-        GameObject player = Instantiate((GameObject)Resources.Load("Essentials/PlayerController"));
+        GameObject player = FindObjectOfType<PlayerController>().gameObject;
+
+        if (player == null)
+            player = Instantiate((GameObject)Resources.Load("Essentials/PlayerController"));
 
         player.transform.position = playerStart.position;
         player.transform.forward = playerStart.forward;
@@ -73,6 +84,9 @@ public class GameManager : MonoBehaviour
     {
         currentTurnIndex++;
 
+        if (currentTurnIndex >= turns.Count)
+            currentTurnIndex = 0;
+
         currentTurn = turns[currentTurnIndex];
 
         currentTurn.StartTurn();
@@ -82,6 +96,9 @@ public class GameManager : MonoBehaviour
     {
         if (!dontIncrement)
             currentTurnIndex++;
+
+        if (currentTurnIndex >= turns.Count)
+            currentTurnIndex = 0;
 
         currentTurn = turns[currentTurnIndex];
 
@@ -93,9 +110,17 @@ public class GameManager : MonoBehaviour
         if (currentTurnIndex >= turns.Count)
         {
             currentTurnIndex = 0;
-        }
 
-        StartTurn(true);
+            //Add delay and feedback
+
+            StartTurn(true);
+        }
+        else
+        {
+            //Add delay and feedback
+
+            StartTurn();
+        }
     }
     #endregion
 }

@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool CanMove;
     public GameObject Camera;
 
-    [SerializeField] private float walkSpeed;
+    public float WalkSpeed;
     [SerializeField] private float gravity = -9.81f;
 
     [Header("References")]
@@ -22,10 +22,13 @@ public class PlayerController : MonoBehaviour
 
     private float XInput, ZInput;
     private Vector3 Forward, Right, velocity;
-
+    private Vector3 constrainPos;
+    private float constrainMaxDist;
 
     private Animator animator;
     private CharacterController controller;
+
+    [HideInInspector] public bool Moving, Constrained;
 
     public void Init()
     {
@@ -41,11 +44,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void UpdatePlayer()
+    public void UpdatePlayer(bool constrain)
     {
         ReadInputs();
 
-        MovementManagement();
+        MovementManagement(constrain);
 
         Gravity();
 
@@ -60,7 +63,7 @@ public class PlayerController : MonoBehaviour
         ZInput = Input.GetAxis("Vertical") * Time.deltaTime;
     }
 
-    private void MovementManagement()
+    private void MovementManagement(bool constrain)
     {
         if (!CanMove)
             return;
@@ -70,14 +73,29 @@ public class PlayerController : MonoBehaviour
         Vector3 forward = Forward * ZInput;
         Vector3 right = Right * XInput;
 
-        float moveSpeed = walkSpeed;
+        float moveSpeed = WalkSpeed;
 
 
         move = Vector3.Normalize(forward + right) * moveSpeed * Time.deltaTime;
 
-        if (move.magnitude > 0)
-            controller.Move(move);
+        if (constrain)
+        {
+            var dist = Vector3.Distance(constrainPos, transform.position + move);
+            if (dist < constrainMaxDist)
+            {
+                if (move.magnitude > 0)
+                    controller.Move(move);
 
+                Moving = move.magnitude > 0;
+            }
+        }
+        else
+        {
+            if (move.magnitude > 0)
+                controller.Move(move);
+
+            Moving = move.magnitude > 0;
+        }
 
         animator.SetBool("Moving", move.magnitude > 0);
         animator.SetFloat("MoveDir", Mathf.Sign(ZInput));
@@ -96,6 +114,18 @@ public class PlayerController : MonoBehaviour
         //Gravity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void ResetAnimator()
+    {
+        animator.SetBool("Moving", false);
+        animator.SetFloat("MoveDir", 1);
+    }
+
+    public void UpdateConstraint(Vector3 consPos, float consDist)
+    {
+        constrainPos = consPos;
+        constrainMaxDist = consDist;
     }
 
 
