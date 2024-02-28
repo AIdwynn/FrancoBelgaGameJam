@@ -52,7 +52,11 @@ namespace FrancoGameJam.Genration
                     Console.WriteLine("end created");
                     categorie = _endPoints;
                 }
-                
+
+                var roomSpawnChances = categorie.RoomSpawnChances;
+                numRan = random.Next(0, roomSpawnChances[categorie.Areas.Length -1]);
+                var room = categorie.Areas[numRan];
+                var position = startPoint.position + room.Room.Offset;
             } while (!goodSpawn);
         
             return true;
