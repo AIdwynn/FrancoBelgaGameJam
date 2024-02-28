@@ -241,6 +241,95 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &247000272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247000274}
+  - component: {fileID: 247000273}
+  m_Layer: 0
+  m_Name: BIGTEST
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &247000273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247000272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0795f0f1735525840b1874de3de1681a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _categories:
+  - _name: Corridors
+    _spawnChance: 75
+    _areas:
+    - _spawnChance: 15
+      _room: {fileID: 1143690371234775694, guid: 461b4613234d5d749adbeb6d533b2221,
+        type: 3}
+    - _spawnChance: 15
+      _room: {fileID: 1143690371234775694, guid: b6376bc4bc5fca449b20fbfac2bf6b4b,
+        type: 3}
+    - _spawnChance: 15
+      _room: {fileID: 1143690371234775694, guid: dad542013387db449a30b88962b8a316,
+        type: 3}
+  - _name: Rooms
+    _spawnChance: 25
+    _areas:
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: 3151c75bb7bf2c3468b103e6fedd5dbf,
+        type: 3}
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: 932d6c0d156d80c4f8a8bdd2afa6d4e6,
+        type: 3}
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: 39651e08ad677924db8e78df58e010ec,
+        type: 3}
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: 7645bcaa7e51dfd41a08e8357abef62d,
+        type: 3}
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: 83061707ce817ab4892fea9c3507caed,
+        type: 3}
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: 3b78da077f328874aa12b3fbf42d3be8,
+        type: 3}
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: 19809f8c298115e4faa59db5d40f76ff,
+        type: 3}
+  _endPoints:
+    _name: Ends
+    _spawnChance: 25
+    _areas:
+    - _spawnChance: 1
+      _room: {fileID: 1143690371234775694, guid: c8732decdbdf1f143be8a96e409b5e44,
+        type: 3}
+  _StartEndRoom: {fileID: 892849990}
+--- !u!4 &247000274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247000272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765257205
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,10 +581,19 @@ MonoBehaviour:
     _spawnChance: 75
     _areas:
     - _spawnChance: 50
-      _room: {fileID: 1143690371234775694, guid: 2d19ef7878bff904da45ae4f8283696e,
+      _room: {fileID: 1143690371234775694, guid: b6376bc4bc5fca449b20fbfac2bf6b4b,
         type: 3}
     - _spawnChance: 50
       _room: {fileID: 1143690371234775694, guid: 461b4613234d5d749adbeb6d533b2221,
+        type: 3}
+  - _name: Corners
+    _spawnChance: 75
+    _areas:
+    - _spawnChance: 50
+      _room: {fileID: 1143690371234775694, guid: dad542013387db449a30b88962b8a316,
+        type: 3}
+    - _spawnChance: 50
+      _room: {fileID: 1143690371234775694, guid: b6376bc4bc5fca449b20fbfac2bf6b4b,
         type: 3}
   _endPoints:
     _name: Ends
@@ -527,4 +625,5 @@ SceneRoots:
   - {fileID: 765257208}
   - {fileID: 166554378}
   - {fileID: 904014931}
+  - {fileID: 247000274}
   - {fileID: 892849989}
