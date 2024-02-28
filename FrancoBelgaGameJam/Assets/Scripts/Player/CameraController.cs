@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private List<CameraConstraint> constraints = new List<CameraConstraint>();
 
     [HideInInspector] public CinemachineVirtualCamera MainCam;
-    private CinemachineImpulseSource impulseSource;
+    [SerializeField] private CinemachineImpulseSource recoilSource, hurtSource;
     private float xRotation, yRotation;
     private float baseFOV;
 
@@ -42,14 +42,14 @@ public class CameraController : MonoBehaviour
     private void Awake()
     {
         MainCam = GetComponentInChildren<CinemachineVirtualCamera>();
-        impulseSource = GetComponent<CinemachineImpulseSource>();
+        recoilSource = GetComponent<CinemachineImpulseSource>();
         Cursor.lockState = CursorLockMode.Locked;
         SetConstraint("Base");
     }
     public void Init()
     {
         MainCam = GetComponentInChildren<CinemachineVirtualCamera>();
-        impulseSource = GetComponent<CinemachineImpulseSource>();
+        recoilSource = GetComponent<CinemachineImpulseSource>();
         Cursor.lockState = CursorLockMode.Locked;
         SetConstraint("Base");
 
@@ -87,7 +87,12 @@ public class CameraController : MonoBehaviour
 
     public void Recoil()
     {
-        impulseSource.GenerateImpulse();
+        recoilSource.GenerateImpulse();
+    }
+
+    public void HurtShake()
+    {
+        hurtSource.GenerateImpulse();
     }
 
     public void SetFOV(float fov)

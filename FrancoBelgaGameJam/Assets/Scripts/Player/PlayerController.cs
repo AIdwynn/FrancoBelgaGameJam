@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Lifeform
 {
     [Header("Controller")]
     public bool IsGrounded;
@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
     private CameraController cameraController;
+    private AbilitiesManager abilitiesManager;
 
     private float XInput, ZInput;
     private Vector3 Forward, Right, velocity;
@@ -28,15 +29,17 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private CharacterController controller;
 
-    [HideInInspector] public bool Moving, Constrained;
+    [HideInInspector] public bool Moving, Constrained, EndTurnAction;
 
     public void Init()
     {
         cameraController = GetComponentInChildren<CameraController>();
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        abilitiesManager = GetComponentInChildren<AbilitiesManager>();
 
         cameraController.Init();
+        abilitiesManager.Init(this);
     }
 
     public void TurnStart()
@@ -53,6 +56,7 @@ public class PlayerController : MonoBehaviour
         Gravity();
 
         cameraController.UpdateCamera();
+        abilitiesManager.UpdateManager();
     }
 
     private void ReadInputs()
@@ -128,6 +132,25 @@ public class PlayerController : MonoBehaviour
         constrainMaxDist = consDist;
     }
 
+    public void SwapWeapon()
+    {
+        animator.SetTrigger("ChangeWeapon");
+    }
+
+    public override void Hurt()
+    {
+        base.Hurt();
+
+        cameraController.HurtShake();
+        animator.SetTrigger("Hurt");
+    }
+
+    public override void Die()
+    {
+        base.Die();
+
+        animator.SetTrigger("Die");
+    }
 
     private void InitializeMoveDir()
     {

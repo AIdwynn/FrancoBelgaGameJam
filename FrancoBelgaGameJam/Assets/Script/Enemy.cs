@@ -1,8 +1,13 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+
+public enum EnemyAttackState
+{
+    Not, Charging
+}
 
 public class Enemy : MonoBehaviour
 {
@@ -12,23 +17,79 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _maxTravelDistance;
     [SerializeField] private float _attackRange;
 
-    private Transform _player;   
+    [Header ("Editor")]
+    [SerializeField] private bool _drawGizmos;
+
+    private Transform _player;
     private float _distanceTraveled;
     private float _previousRemainingDistance;
+    private EnemyAttackState _attackState;
+
+    private Lifeform _health;
+
     public Action OnStop;
 
-    public bool IsStunned {  get; set; }
-    public bool IsMoving { get { return !_agent.isStopped; }  }    
+    public Action OnChargingAttack;
+    public Action OnAttack;
+
+    public bool IsStunned { get; set; }
+    public bool IsMoving { get { return !_agent.isStopped; } }
+
+    #region UnityMethods
+
+    private void Start()
+    {
+        _player = GameManager.Instance.Player.transform;
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.isStopped = true;
+        _attackState = EnemyAttackState.Not;
+
+        OnAttack += () => { 
+            //_player.GetComponent<Lifeform>().Hurt();
+            _attackState = EnemyAttackState.Not; };
+
+        OnChargingAttack += () => { _attackState = EnemyAttackState.Charging; };
+
+        _health = GetComponent<Lifeform>();
+
+        _health.OnDeath.AddListener(KillEnemy);
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (!_drawGizmos) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _detectionRange);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, _maxTravelDistance);
+    }
+
+    #endregion
+    private void KillEnemy()
+    {
+        Destroy(gameObject);
+    }
 
     public void Activate()
     {
-        _distanceTraveled = 0;
-
-        if (IsStunned) return; // if enemy is stunned then don't activate enemy
+        if (IsStunned) // if enemy is stunned then don't activate enemy
+        {
+            OnStop?.Invoke(); 
+            return;
+        } 
 
         float distanceEnemyPlayer = Vector3.Distance(transform.position, _player.position);
 
-        if (distanceEnemyPlayer > _detectionRange) return;
+        if (distanceEnemyPlayer > _detectionRange)
+        {
+            OnStop?.Invoke(); 
+            return;
+        }
+
+        PrepareNextMove();
 
         if (distanceEnemyPlayer < _attackRange)
         {
@@ -39,6 +100,8 @@ public class Enemy : MonoBehaviour
         {
             // move normally
             _agent.isStopped = false;
+
+            _attackState = EnemyAttackState.Not;
 
             StartCoroutine(CheckMovement());
 
@@ -53,44 +116,48 @@ public class Enemy : MonoBehaviour
 
             _previousRemainingDistance = _agent.remainingDistance;
             yield return new WaitForEndOfFrame();
+
+            if(_agent.remainingDistance <= _agent.stoppingDistance) break;
+            
         }
 
+        _agent.velocity = Vector3.zero;
         _agent.isStopped = true;
-        OnStop?.Invoke();
+
+        CheckAttackState();
     }
 
     private void CheckAttackState()
     {
-        Debug.Log("Is close enough to attack");
+        // returns if the distance is more than attack range
+        if (Vector3.Distance(transform.position, _player.position) < _attackRange)
+        {
+            switch (_attackState)
+            {
+                case EnemyAttackState.Charging:
+                    OnAttack?.Invoke();
+                    break;
+
+                case EnemyAttackState.Not:
+                    OnChargingAttack?.Invoke();
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        OnStop?.Invoke();
+
+        Debug.Log(_attackState);
+
     }
 
-    #region UnityMethods
-    private void Awake()
-    {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
 
-    }
-
-    private void OnEnable()
-    {
-        _agent = GetComponent<NavMeshAgent>();
-        PrepareNextMove();
-
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _detectionRange);
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, _maxTravelDistance);
-    }
-
-    #endregion
-
+    #region NavigationLogic
     private void PrepareNextMove()
     {
+        _distanceTraveled = 0;
         _agent.isStopped = true;
 
         NavMeshPath path = MakePath(transform.position, _player.position);
@@ -103,7 +170,7 @@ public class Enemy : MonoBehaviour
     {
         NavMeshPath path = new NavMeshPath();
 
-        if(NavMesh.CalculatePath(startPos, endPos, NavMesh.AllAreas, path))
+        if (NavMesh.CalculatePath(startPos, endPos, NavMesh.AllAreas, path))
         {
             return path;
         }
@@ -123,6 +190,6 @@ public class Enemy : MonoBehaviour
         }
         return length;
     }
-
+    #endregion
 
 }
