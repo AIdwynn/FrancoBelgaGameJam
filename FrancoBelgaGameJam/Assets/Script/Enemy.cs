@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEngine.UI.GridLayoutGroup;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private Transform _player;   
     [SerializeField] private NavMeshAgent _agent;
 
     [SerializeField] private float _detectionRange;
     [SerializeField] private float _maxTravelDistance;
     [SerializeField] private float _attackRange;
 
+    private Transform _player;   
     private float _distanceTraveled;
     private float _previousRemainingDistance;
 
@@ -65,15 +64,17 @@ public class Enemy : MonoBehaviour
     #region UnityMethods
     private void Awake()
     {
-        _player =
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
+
     private void OnEnable()
     {
         _agent = GetComponent<NavMeshAgent>();
         PrepareNextMove();
 
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -82,6 +83,7 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, _maxTravelDistance);
     }
+
     #endregion
 
     private void PrepareNextMove()

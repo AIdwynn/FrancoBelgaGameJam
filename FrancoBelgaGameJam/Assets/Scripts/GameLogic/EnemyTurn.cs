@@ -21,7 +21,6 @@ public class EnemyTurn : Turn
     {
         foreach (Enemy enemy in _enemies)
         {
-            enemy.enabled = true;
             enemy.Activate();
         }
     }
