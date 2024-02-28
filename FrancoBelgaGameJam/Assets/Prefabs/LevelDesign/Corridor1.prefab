@@ -612,7 +612,7 @@ MonoBehaviour:
   _startPoint: {fileID: 5577344975891892585}
   _endPoint:
   - {fileID: 9223041102265763470}
-  _size: 20
+  _size: {x: 2, y: 5}
 --- !u!1 &6951460987687691588
 GameObject:
   m_ObjectHideFlags: 0
