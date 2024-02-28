@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] Transform playerStart;
+    public UIManager UIManager;
     #endregion
 
     #region Accessors
@@ -36,17 +37,19 @@ public class GameManager : MonoBehaviour
         else
             Destroy(this);
 
-        //var player = FindObjectOfType<PlayerController>().gameObject;
+        var player = FindObjectOfType<PlayerController>();
 
-        GameObject player = null;
+        GameObject playerObject = null;
 
         if (player == null)
-            player = Instantiate((GameObject)Resources.Load("Essentials/PlayerController"));
+            playerObject = Instantiate((GameObject)Resources.Load("Essentials/PlayerController"));
+        else
+            playerObject = player.gameObject;
 
-        player.transform.position = playerStart.position;
-        player.transform.forward = playerStart.forward;
+        playerObject.transform.position = playerStart.position;
+        playerObject.transform.forward = playerStart.forward;
 
-        Player = player.GetComponent<PlayerController>();
+        Player = playerObject.GetComponent<PlayerController>();
 
         foreach (var item in turns)
         {
