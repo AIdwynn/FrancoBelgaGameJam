@@ -530,6 +530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndExample
       objectReference: {fileID: 0}
+    - target: {fileID: 8020090864772408869, guid: c8732decdbdf1f143be8a96e409b5e44,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -581,19 +586,19 @@ MonoBehaviour:
     _spawnChance: 75
     _areas:
     - _spawnChance: 50
-      _room: {fileID: 1143690371234775694, guid: b6376bc4bc5fca449b20fbfac2bf6b4b,
+      _room: {fileID: 1143690371234775694, guid: 2d19ef7878bff904da45ae4f8283696e,
         type: 3}
     - _spawnChance: 50
-      _room: {fileID: 1143690371234775694, guid: 461b4613234d5d749adbeb6d533b2221,
+      _room: {fileID: 1143690371234775694, guid: 2d19ef7878bff904da45ae4f8283696e,
         type: 3}
   - _name: Corners
-    _spawnChance: 75
+    _spawnChance: 2000
     _areas:
     - _spawnChance: 50
-      _room: {fileID: 1143690371234775694, guid: dad542013387db449a30b88962b8a316,
+      _room: {fileID: 1143690371234775694, guid: 6179b9d11be4a5b42b094accb97dea48,
         type: 3}
     - _spawnChance: 50
-      _room: {fileID: 1143690371234775694, guid: b6376bc4bc5fca449b20fbfac2bf6b4b,
+      _room: {fileID: 1143690371234775694, guid: 6179b9d11be4a5b42b094accb97dea48,
         type: 3}
   _endPoints:
     _name: Ends
