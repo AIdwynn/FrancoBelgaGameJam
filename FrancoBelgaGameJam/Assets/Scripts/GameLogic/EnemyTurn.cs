@@ -1,15 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyTurn : Turn
 {
-    [SerializeField] GameObject debugCanvas;
+    private Enemy[] _enemies = new Enemy[0];
+
+    private void Start()
+    {
+        GetAllEnemies();
+    }
+
+    private void GetAllEnemies()
+    {
+        _enemies = GameObject.FindObjectsByType<Enemy>(FindObjectsSortMode.None);
+    }
 
     public override void StartTurn()
     {
-        debugCanvas.SetActive(true);
-        StartCoroutine(C_WaitABit());
+        foreach (Enemy enemy in _enemies)
+        {
+            enemy.enabled = true;
+            enemy.Activate();
+        }
     }
 
     public override void UpdateTurn()
@@ -20,16 +34,5 @@ public class EnemyTurn : Turn
     public override void FixedUpdateTurn()
     {
 
-    }
-
-    //Debug, please notify me if modifs are needed here - Thomas
-
-
-    IEnumerator C_WaitABit()
-    {
-        yield return new WaitForSeconds(2f);
-
-        debugCanvas.SetActive(false);
-        GameManager.EndTurn();
     }
 }
