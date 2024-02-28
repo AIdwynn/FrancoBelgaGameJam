@@ -40,6 +40,7 @@ public class AbilitiesManager : MonoBehaviour
 
         bool canUse = false;
         var UIManager = GameManager.Instance.UIManager;
+        RaycastHit hit = new RaycastHit();
 
         if (current.alwaysActive)
         {
@@ -48,9 +49,9 @@ public class AbilitiesManager : MonoBehaviour
         }
         else
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.SphereCast(ray.origin - ray.direction * 2, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+
+            if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
             {
                 UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
                 canUse = true;
@@ -63,7 +64,10 @@ public class AbilitiesManager : MonoBehaviour
 
         if (canUse && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Bam");
+            Lifeform target = hit.transform.GetComponent<Lifeform>();
+
+            if (target != null)
+                player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target);
         }
     }
 

@@ -30,6 +30,11 @@ public class PlayerController : Lifeform
     private CharacterController controller;
 
     [HideInInspector] public bool Moving, Constrained, EndTurnAction;
+    private float endActionAnticipation;
+    private float endActionRecovery;
+    bool canHit;
+    Lifeform endActionTarget;
+
 
     public void Init()
     {
@@ -47,8 +52,38 @@ public class PlayerController : Lifeform
 
     }
 
+
     public void UpdatePlayer(bool constrain)
     {
+        if (EndTurnAction)
+        {
+            if (endActionAnticipation > 0)
+            {
+                endActionAnticipation -= Time.deltaTime;
+            }
+            else
+            {
+                if (canHit)
+                {
+                    canHit = false;
+
+                    endActionTarget.Hurt();
+                }
+
+                if (endActionRecovery > 0)
+                {
+                    endActionRecovery -= Time.deltaTime;
+                }
+                else
+                {
+                    EndTurnAction = false;
+                    GameManager.Instance.EndTurn();
+                }
+            }
+
+            return;
+        }
+
         ReadInputs();
 
         MovementManagement(constrain);
@@ -118,6 +153,34 @@ public class PlayerController : Lifeform
         //Gravity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void EndTurnAttack(string animation, float anticipation, float recovery)
+    {
+        EndTurnAction = true;
+        canHit = true;
+
+        endActionAnticipation = anticipation;
+        endActionRecovery = recovery;
+
+        animator.SetTrigger(animation);
+
+        canHit = false;
+    }
+
+    public void EndTurnAttack(string animation, float anticipation, float recovery, Lifeform target)
+    {
+        EndTurnAction = true;
+        canHit = true;
+
+        endActionAnticipation = anticipation;
+        endActionRecovery = recovery;
+
+        endActionTarget = target;
+
+        animator.SetTrigger(animation);
+
+        canHit = true;
     }
 
     public void ResetAnimator()

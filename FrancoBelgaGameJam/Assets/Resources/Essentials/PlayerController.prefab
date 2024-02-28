@@ -314,25 +314,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilities:
-  - Name: A_Pickaxe
+  - Name: Pickaxe
     Item: {fileID: 3606485536127316200, guid: c98de629924ad9f4cbdd3f11728aa8fa, type: 3}
     AnimationName: Pickaxe
-  - Name: A_TazerGun
+    alwaysActive: 0
+    range: 2.5
+    aimAssist: 1.4
+    anticipation: 0.6
+    recovery: 1
+  - Name: ZapGun
     Item: {fileID: 6557889055527003548, guid: b022217e88433f841bd04a6f69100d70, type: 3}
     AnimationName: Tazer
-  - Name: A_Skip
+    alwaysActive: 0
+    range: 13
+    aimAssist: 0.7
+    anticipation: 1
+    recovery: 1
+  - Name: Skip
     Item: {fileID: 393969351240433644, guid: 3ef82e92dfd7cd44d8c88fd6cdbd664d, type: 3}
     AnimationName: No
-  meleeRange: 1.26
-  meleeAnticipation: 0
-  meleeRecovery: 0
-  rangedRange: 7.43
-  rangedAnticipation: 0
-  rangedRecovery: 0
-  skipDelay: 0
+    alwaysActive: 1
+    range: 0
+    aimAssist: 0
+    anticipation: 1
+    recovery: 1
+  enemiesLayer:
+    serializedVersion: 2
+    m_Bits: 64
   weaponsParent: {fileID: 936301722416657075}
-  showMeleeRange: 0
-  showRangedRange: 0
 --- !u!143 &7040077837176908146
 CharacterController:
   m_ObjectHideFlags: 0
