@@ -27,21 +27,29 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private CharacterController controller;
 
-    private void Awake()
+    public void Init()
     {
         cameraController = GetComponentInChildren<CameraController>();
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+
+        cameraController.Init();
     }
 
+    public void TurnStart()
+    {
 
-    private void Update()
+    }
+
+    public void UpdatePlayer()
     {
         ReadInputs();
 
         MovementManagement();
 
         Gravity();
+
+        cameraController.UpdateCamera();
     }
 
     private void ReadInputs()

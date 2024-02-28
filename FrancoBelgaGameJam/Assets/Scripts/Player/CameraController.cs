@@ -46,13 +46,19 @@ public class CameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         SetConstraint("Base");
     }
-    private void Start()
+    public void Init()
     {
+        MainCam = GetComponentInChildren<CinemachineVirtualCamera>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+        Cursor.lockState = CursorLockMode.Locked;
+        SetConstraint("Base");
+
         baseFOV = MainCam.m_Lens.FieldOfView;
         cameraZoom = baseFOV;
     }
 
-    void Update()
+
+    public void UpdateCamera()
     {
         if (CanMove)
             CamMovement();
