@@ -12,6 +12,12 @@ public class MainMenuScript : MonoBehaviour
         ManagerDeScene.Instance.Start();
     }
 
+    private void Update()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
+
     public void PressedPlay()
     {
         SceneTransition.FadeToBlack(ManagerDeScene.LoadNextScene);
