@@ -18,7 +18,7 @@ public class AbilitiesManager : MonoBehaviour
     [SerializeField] private LayerMask enemiesLayer, whatAreWalls;
 
     [Header("References")]
-    [SerializeField] private Transform weaponsParent;
+    public Transform weaponsParent;
     [SerializeField] AudioSource swap;
 
     private PlayerController player;

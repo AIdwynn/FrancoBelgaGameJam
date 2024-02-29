@@ -88,6 +88,12 @@ public class PlayerController : Lifeform
 
                         cameraController.Rumble();
                         chicken.Play();
+
+                        GameObject go = GetComponentInChildren<Chicken>().gameObject;
+                        go.GetComponent<Animator>().SetTrigger("Activate");
+
+                        var dir = Vector3.Normalize(endActionTarget.transform.position - abilitiesManager.weaponsParent.position);
+                        ManagerDeParticle.PlayParticleByName(ParticleNames.Taser, this.transform.position, dir);
                     }
                     else
                     {
