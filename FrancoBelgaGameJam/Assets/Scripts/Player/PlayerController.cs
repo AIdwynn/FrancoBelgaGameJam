@@ -93,7 +93,8 @@ public class PlayerController : Lifeform
                         go.GetComponent<Animator>().SetTrigger("Activate");
 
                         var dir = Vector3.Normalize(endActionTarget.transform.position - abilitiesManager.weaponsParent.position);
-                        ManagerDeParticle.PlayParticleByName(ParticleNames.Taser, this.transform.position, dir);
+                        ManagerDeParticle.PlayParticleByName(ParticleNames.Taser, 
+                            abilitiesManager.weaponsParent.position + Vector3.up * 0.2f, Quaternion.Euler(0, 90, 0) * dir);
                     }
                     else
                     {
