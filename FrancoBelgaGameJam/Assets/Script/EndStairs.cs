@@ -8,7 +8,7 @@ public class EndStairs : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneTransition.FadeToBlack(ManagerDeScene.RestartCurrentScene);
+            SceneTransition.FadeToBlack(ManagerDeScene.LoadNextScene);
         }
     }
 }
