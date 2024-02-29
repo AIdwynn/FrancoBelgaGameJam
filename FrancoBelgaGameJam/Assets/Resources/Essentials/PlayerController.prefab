@@ -342,6 +342,7 @@ MonoBehaviour:
     aimAssist: 0
     anticipation: 1
     recovery: 1
+  ZapAmmo: 3
   enemiesLayer:
     serializedVersion: 2
     m_Bits: 64
