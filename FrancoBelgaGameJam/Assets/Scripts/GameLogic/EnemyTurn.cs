@@ -82,26 +82,5 @@ public class EnemyTurn : Turn
             GameManager.EndTurn();
         }
 
-
-
-
-
-
-        //bool canEnd = true;
-
-        //foreach(Enemy enemy in _enemies)
-        //{
-        //    if (enemy.IsMoving)
-        //    {
-        //        canEnd = false;
-        //        break;
-        //    }
-
-        //}
-
-        //if (canEnd)
-        //{
-        //    GameManager.EndTurn();
-        //}
     }
 }
