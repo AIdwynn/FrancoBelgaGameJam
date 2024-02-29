@@ -61,14 +61,14 @@ public class AbilitiesManager : MonoBehaviour
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-            if (!Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, whatAreWalls))
+            if (!Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist, ray.direction, out hit, current.range, whatAreWalls))
             {
                 if (isZap)
                 {
                     if (CheckForZap())
                     {
 
-                        if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                        if (Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
                         {
                             UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
                             canUse = true;
