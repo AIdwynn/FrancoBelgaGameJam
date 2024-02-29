@@ -62,7 +62,7 @@ public class AbilitiesManager : MonoBehaviour
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-            if (!Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist, ray.direction, out hit, current.range, whatAreWalls))
+            if (!Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist/2, ray.direction, out hit, current.range, whatAreWalls))
             {
                 if (isZap)
                 {
