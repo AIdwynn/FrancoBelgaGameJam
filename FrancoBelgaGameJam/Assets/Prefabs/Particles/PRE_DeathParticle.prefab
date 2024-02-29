@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4476494853507047648
+--- !u!1 &3870815003863699171
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5728351200757283435}
-  - component: {fileID: 899216300691670116}
+  - component: {fileID: 3656955348861368792}
+  - component: {fileID: -1767442243315308054}
   m_Layer: 0
-  m_Name: ManagerDeParticleLoader
+  m_Name: PRE_DeathParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5728351200757283435
+--- !u!4 &3656955348861368792
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4476494853507047648}
+  m_GameObject: {fileID: 3870815003863699171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,25 +32,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &899216300691670116
+--- !u!114 &-1767442243315308054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4476494853507047648}
+  m_GameObject: {fileID: 3870815003863699171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e003ecbace3d9a48b57645a1ac56cb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e14171fbedab214bb184b7066e465ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitParticle: {fileID: 8315892154402418237, guid: 488dc8ca14e3ba74eb073b1353b46fde,
-    type: 3}
-  DeathParticle: {fileID: -1767442243315308054, guid: 4e2b841ca94c2cb428670348941aa585,
-    type: 3}
-  GetHitParticle: {fileID: 209312566148441586, guid: 4b989a55fc8827342a8e34f6178af11e,
-    type: 3}
-  TaserParticle: {fileID: 4842379024828903038, guid: 5525061c7212f1946b8915b142f1eb9a,
-    type: 3}
-  EnergyCollectParticle: {fileID: -3182805239255737422, guid: ef3b3b93042d4d34f8e52e9640582c3e,
-    type: 3}
+  lifeTime: 1
