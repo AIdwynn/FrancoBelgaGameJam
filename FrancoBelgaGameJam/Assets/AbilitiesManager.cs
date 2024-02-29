@@ -64,10 +64,20 @@ public class AbilitiesManager : MonoBehaviour
 
         if (canUse && Input.GetMouseButtonDown(0))
         {
-            Lifeform target = hit.transform.GetComponent<Lifeform>();
+            if (hit.transform != null)
+            {
+                Lifeform target = hit.transform.GetComponent<Lifeform>();
 
-            if (target != null)
-                player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target);
+                if (target != null)
+                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target);
+                else
+                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
+
+            }
+            else
+            {
+                player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
+            }
         }
     }
 
