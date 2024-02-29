@@ -12,7 +12,8 @@ public class ParticleLoader : MonoBehaviour
 
     void Awake()
     {
-        var particle = new ParticleSelfDestruct[]{HitParticle};
+        var particle = new ParticleSelfDestruct[]
+            {HitParticle,DeathParticle,GetHitParticle,TaserParticle,EnergyCollectParticle};
         new ManagerDeParticle(particle);
         ParticleNames.Hit = HitParticle.name;
         ParticleNames.Death = DeathParticle.name;

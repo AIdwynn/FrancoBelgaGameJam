@@ -44,9 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e003ecbace3d9a48b57645a1ac56cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitParticle: {fileID: 0}
-  DeathParticle: {fileID: 0}
-  GetHitParticle: {fileID: 0}
+  HitParticle: {fileID: 8315892154402418237, guid: 488dc8ca14e3ba74eb073b1353b46fde,
+    type: 3}
+  DeathParticle: {fileID: -1767442243315308054, guid: 4e2b841ca94c2cb428670348941aa585,
+    type: 3}
+  GetHitParticle: {fileID: 209312566148441586, guid: 4b989a55fc8827342a8e34f6178af11e,
+    type: 3}
   TaserParticle: {fileID: 4842379024828903038, guid: 5525061c7212f1946b8915b142f1eb9a,
     type: 3}
-  EnergyCollectParticle: {fileID: 0}
+  EnergyCollectParticle: {fileID: -3182805239255737422, guid: ef3b3b93042d4d34f8e52e9640582c3e,
+    type: 3}
