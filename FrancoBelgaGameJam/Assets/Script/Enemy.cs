@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     [Header ("Editor")]
     [SerializeField] private bool _drawGizmos;
 
-    private Transform _player;
+    private PlayerController _player;
     private float _distanceTraveled;
     private float _previousRemainingDistance;
     private EnemyAttackState _attackState;
@@ -39,13 +39,13 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        _player = GameManager.Instance.Player.transform;
+        _player = GameManager.Instance.Player;
         _agent = GetComponent<NavMeshAgent>();
         _agent.isStopped = true;
         _attackState = EnemyAttackState.Not;
 
         OnAttack += () => { 
-            //_player.GetComponent<Lifeform>().Hurt();
+            _player.Hurt();
             _attackState = EnemyAttackState.Not; };
 
         OnChargingAttack += () => { _attackState = EnemyAttackState.Charging; };
@@ -77,11 +77,12 @@ public class Enemy : MonoBehaviour
     {
         if (IsStunned) // if enemy is stunned then don't activate enemy
         {
+            IsStunned = false;
             OnStop?.Invoke(); 
             return;
         } 
 
-        float distanceEnemyPlayer = Vector3.Distance(transform.position, _player.position);
+        float distanceEnemyPlayer = Vector3.Distance(transform.position, _player.transform.position);
 
         if (distanceEnemyPlayer > _detectionRange)
         {
@@ -130,12 +131,13 @@ public class Enemy : MonoBehaviour
     private void CheckAttackState()
     {
         // returns if the distance is more than attack range
-        if (Vector3.Distance(transform.position, _player.position) < _attackRange)
+        if (Vector3.Distance(transform.position, _player.transform.position) < _attackRange)
         {
             switch (_attackState)
             {
                 case EnemyAttackState.Charging:
                     OnAttack?.Invoke();
+                    Debug.Log("shoot me");
                     break;
 
                 case EnemyAttackState.Not:
@@ -160,7 +162,7 @@ public class Enemy : MonoBehaviour
         _distanceTraveled = 0;
         _agent.isStopped = true;
 
-        NavMeshPath path = MakePath(transform.position, _player.position);
+        NavMeshPath path = MakePath(transform.position, _player.transform.position);
         _agent.SetPath(path);
 
         _previousRemainingDistance = _agent.remainingDistance;
