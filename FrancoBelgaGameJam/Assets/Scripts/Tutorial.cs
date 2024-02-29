@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,6 +15,9 @@ public class Tutorial : MonoBehaviour
     [SerializeField] [TextArea] private string _enemy2Introduction;
 
     [Header("Other")] [SerializeField] private TextMeshProUGUI Text;
-    
-    
+
+    private void Start()
+    {
+        GameManager.Instance.Player.RanOuttaMovement += (s, e) => { };
+    }
 }

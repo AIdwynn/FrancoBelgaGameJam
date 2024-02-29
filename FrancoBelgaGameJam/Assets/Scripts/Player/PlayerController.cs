@@ -37,7 +37,7 @@ public class PlayerController : Lifeform
     bool canHit, stuns;
     Lifeform endActionTarget;
 
-    private event EventHandler RanOuttaMovement ;
+    public event EventHandler RanOuttaMovement ;
 
 
     public void Init()
