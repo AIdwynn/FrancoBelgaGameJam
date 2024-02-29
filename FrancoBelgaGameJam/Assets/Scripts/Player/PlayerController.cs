@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,6 +36,8 @@ public class PlayerController : Lifeform
     private float endActionRecovery;
     bool canHit, stuns;
     Lifeform endActionTarget;
+
+    private event EventHandler RanOuttaMovement ;
 
 
     public void Init()
@@ -232,6 +235,7 @@ public class PlayerController : Lifeform
     public void Freeze()
     {
         CanMove = false;
+        SCR_EventHelper.TrySendEvent(RanOuttaMovement, this);
         animator.SetBool("CanMove", true);
     }
 

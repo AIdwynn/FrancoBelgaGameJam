@@ -62,6 +62,7 @@ public class PlayerTurn : Turn
         {
             distanceVisualizer.SetActive(false);
             player.Freeze();
+            
         }
     }
 
