@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _maxTravelDistance;
     [SerializeField] private float _attackRange;
 
+    [Header("References")]
+    [SerializeField] GameObject distanceVisualizer;
+
     [Header ("Editor")]
     [SerializeField] private bool _drawGizmos;
 
@@ -71,6 +74,20 @@ public class Enemy : MonoBehaviour
     private void KillEnemy()
     {
         Destroy(gameObject);
+    }
+
+    public void TurnStart()
+    {
+        distanceVisualizer.SetActive(false);
+    }
+
+    public void UpdateVisualizer()
+    {
+        distanceVisualizer.SetActive(true);
+
+        var dist = _maxTravelDistance * GameManager.Instance.VisualizerScaleOffset;
+        distanceVisualizer.transform.position = transform.position;
+        distanceVisualizer.transform.localScale = new Vector3(dist, 1, dist);
     }
 
     public void Activate()

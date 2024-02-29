@@ -5,15 +5,22 @@ using UnityEngine;
 public class PlayerTurn : Turn
 {
     [Header("Visualizer")]
-    [SerializeField] float visualizerScaleOffset;
+    float visualizerScaleOffset;
     [SerializeField] GameObject distanceVisualizer;
     [HideInInspector] public float DistanceTravelled;
 
     public override void StartTurn()
     {
+        visualizerScaleOffset = GameManager.VisualizerScaleOffset;
+
         distanceVisualizer.SetActive(true);
         distanceVisualizer.transform.position = GameManager.Player.transform.position;
         DistanceTravelled = 0f;
+
+        foreach (var item in GameManager.EnemyTurn.Enemies)
+        {
+            item.UpdateVisualizer();
+        }
     }
 
     public override void UpdateTurn()

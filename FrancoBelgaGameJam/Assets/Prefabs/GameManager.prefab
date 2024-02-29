@@ -681,7 +681,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2479
+  m_VersionIndex: 2482
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1171,7 +1171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
-  visualizerScaleOffset: 2
   distanceVisualizer: {fileID: 5479255370269427296}
   DistanceTravelled: 0
 --- !u!1 &6434477930086833029
@@ -1519,6 +1518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EasyMode: 1
   maxPlayerDistance: 10
+  VisualizerScaleOffset: 2
   startIndex: 0
   turns:
   - {fileID: 2888835143770165}

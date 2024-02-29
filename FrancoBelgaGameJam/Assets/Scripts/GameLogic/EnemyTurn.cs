@@ -9,6 +9,8 @@ public class EnemyTurn : Turn
     private Enemy[] _enemies = new Enemy[0];
     private Enemy[] _doneEnemies = new Enemy[10];
 
+    public Enemy[] Enemies { get { return _enemies; } }
+
     private int _index = 0; 
 
     private void Start()
@@ -33,6 +35,7 @@ public class EnemyTurn : Turn
 
         foreach (Enemy enemy in _enemies)
         {
+            enemy.TurnStart();
             enemy.Activate();
         }
 

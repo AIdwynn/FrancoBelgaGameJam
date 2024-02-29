@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Turn Settings")]
     [SerializeField] float maxPlayerDistance;
+    public float VisualizerScaleOffset;
     [SerializeField] int startIndex;
     [SerializeField] List<Turn> turns = new List<Turn>();
     int currentTurnIndex;
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] Transform playerStart;
     public UIManager UIManager;
+
+    public EnemyTurn EnemyTurn { get { return turns[1].GetComponent<EnemyTurn>(); } }
     #endregion
 
     #region Accessors
