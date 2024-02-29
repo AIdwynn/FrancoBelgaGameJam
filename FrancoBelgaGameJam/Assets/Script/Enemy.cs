@@ -18,10 +18,11 @@ public class Enemy : Lifeform
     [SerializeField] private float _attackRange;
 
     [Header("References")]
-    [SerializeField] GameObject distanceVisualizer;
+    [SerializeField] GameObject distanceVisualizer, blood;
+    [SerializeField] Transform head;
     [SerializeField] private bool _dieOnAttack;
     [SerializeField] private bool _chargeAttack;
-    [SerializeField] GameObject ragdoll;
+    [SerializeField] GameObject ragdoll, fakeRagdoll, original;
 
     [Header ("Editor")]
     [SerializeField] private bool _drawGizmos;
@@ -36,6 +37,9 @@ public class Enemy : Lifeform
 
     public Action OnChargingAttack;
     public Action OnAttack;
+
+    bool reviveNextTurn;
+
 
     public bool IsStunned { get; set; }
     public ParticleSelfDestruct StunnedParticle;
@@ -83,6 +87,15 @@ public class Enemy : Lifeform
     {
         ManagerDeParticle.PlayParticleByName(ParticleNames.Hit, this.transform.position);
         base.Hurt();
+
+        if (HP > 0 && head != null)
+        {
+            head.transform.localScale = Vector3.zero;
+            IsStunned = true;
+            fakeRagdoll.SetActive(true);
+            original.SetActive(false);
+            reviveNextTurn = true;
+        }
     }
 
     public override void Die()
@@ -121,11 +134,25 @@ public class Enemy : Lifeform
         if (IsStunned) // if enemy is stunned then don't activate enemy
         {
             IsStunned = false;
-            Destroy(StunnedParticle.gameObject);
+
+            if (StunnedParticle != null)
+                Destroy(StunnedParticle.gameObject);
+
             OnStop?.Invoke();
             _animator.SetBool("Moving", false);
             return;
         } 
+
+        if (reviveNextTurn)
+        {
+            if (fakeRagdoll.activeSelf)
+                fakeRagdoll.SetActive(false);
+
+            if (original != null)
+                original.SetActive(true);
+
+            blood.SetActive(true);
+        }
 
         float distanceEnemyPlayer = Vector3.Distance(transform.position, _player.transform.position);
 
@@ -204,7 +231,6 @@ public class Enemy : Lifeform
 
         OnStop?.Invoke();
         _animator.SetBool("Moving", false);
-        Debug.Log(_attackState);
 
     }
 

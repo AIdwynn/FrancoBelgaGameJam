@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI turnText, zapText;
     [SerializeField] Transform hpIconParent;
     [SerializeField] GameObject hpIcon;
+    [SerializeField] RectTransform movementSlider;
     [SerializeField] SkillIcon[] icons;
     [SerializeField] Color ready, unusable, disabled;
 
@@ -51,6 +52,12 @@ public class UIManager : MonoBehaviour
         zapText.transform.DOKill();
         zapText.transform.localScale = Vector3.one;
         zapText.transform.DOPunchScale(Vector3.one, 0.4f);
+    }
+
+    public void UpdateMovementBar(float currentDistanceTraveled)
+    {
+        var sizeDelta = movementSlider.offsetMax;
+        movementSlider.offsetMax = new Vector2( -(currentDistanceTraveled / GameManager.Instance.MaxPlayerDistance) * 150, sizeDelta.y);
     }
 
     #region Items
