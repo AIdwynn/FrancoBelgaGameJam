@@ -49,7 +49,8 @@ public class PlayerController : Lifeform
 
     public void TurnStart()
     {
-
+        CanMove = true;
+        animator.SetBool("CanMove", true);
     }
 
 
@@ -205,6 +206,12 @@ public class PlayerController : Lifeform
     {
         constrainPos = consPos;
         constrainMaxDist = consDist;
+    }
+
+    public void Freeze()
+    {
+        CanMove = false;
+        animator.SetBool("CanMove", true);
     }
 
     public void SwapWeapon()

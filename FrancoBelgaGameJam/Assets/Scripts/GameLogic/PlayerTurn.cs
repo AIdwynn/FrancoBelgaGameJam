@@ -44,12 +44,10 @@ public class PlayerTurn : Turn
         if (player.Moving)
             DistanceTravelled += player.WalkSpeed * Time.deltaTime;
 
-        if (DistanceTravelled > GameManager.MaxPlayerDistance)
+        if (DistanceTravelled > GameManager.MaxPlayerDistance && player.CanMove)
         {
             distanceVisualizer.SetActive(false);
-
-            player.ResetAnimator();
-            GameManager.EndTurn();
+            player.Freeze();
         }
     }
 

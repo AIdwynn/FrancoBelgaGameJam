@@ -13,7 +13,7 @@ public class AbilitiesManager : MonoBehaviour
     [SerializeField] Ability[] abilities;
 
     [Header("Settings")]
-    [SerializeField] private LayerMask enemiesLayer;
+    [SerializeField] private LayerMask enemiesLayer, whatAreWalls;
 
     [Header("References")]
     [SerializeField] private Transform weaponsParent;
@@ -51,14 +51,17 @@ public class AbilitiesManager : MonoBehaviour
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-            if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+            if (!Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, whatAreWalls))
             {
-                UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
-                canUse = true;
-            }
-            else
-            {
-                UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                {
+                    UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
+                    canUse = true;
+                }
+                else
+                {
+                    UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                }
             }
         }
 
