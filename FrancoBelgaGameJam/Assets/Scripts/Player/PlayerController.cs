@@ -32,7 +32,7 @@ public class PlayerController : Lifeform
     [HideInInspector] public bool Moving, Constrained, EndTurnAction;
     private float endActionAnticipation;
     private float endActionRecovery;
-    bool canHit;
+    bool canHit, stuns;
     Lifeform endActionTarget;
 
 
@@ -67,7 +67,17 @@ public class PlayerController : Lifeform
                 {
                     canHit = false;
 
-                    endActionTarget.Hurt();
+                    if (stuns)
+                    {
+                        Enemy e = endActionTarget.GetComponent<Enemy>();
+                        
+                        if (e != null)
+                            e.IsStunned = true;
+                        else
+                            endActionTarget.Hurt();
+                    }
+                    else
+                        endActionTarget.Hurt();
                 }
 
                 if (endActionRecovery > 0)
@@ -168,7 +178,7 @@ public class PlayerController : Lifeform
         canHit = false;
     }
 
-    public void EndTurnAttack(string animation, float anticipation, float recovery, Lifeform target)
+    public void EndTurnAttack(string animation, float anticipation, float recovery, Lifeform target, bool stuns)
     {
         EndTurnAction = true;
         canHit = true;
@@ -181,6 +191,8 @@ public class PlayerController : Lifeform
         animator.SetTrigger(animation);
 
         canHit = true;
+
+        this.stuns = stuns;
     }
 
     public void ResetAnimator()

@@ -69,7 +69,7 @@ public class AbilitiesManager : MonoBehaviour
                 Lifeform target = hit.transform.GetComponent<Lifeform>();
 
                 if (target != null)
-                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target);
+                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target, current.stuns);
                 else
                     player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
 
@@ -119,6 +119,6 @@ public class Ability
     public string Name;
     public GameObject Item;
     public string AnimationName;
-    public bool alwaysActive;
+    public bool alwaysActive, stuns;
     public float range, aimAssist, anticipation, recovery;
 }
