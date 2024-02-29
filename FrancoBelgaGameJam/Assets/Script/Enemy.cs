@@ -20,6 +20,7 @@ public class Enemy : Lifeform
     [Header("References")]
     [SerializeField] GameObject distanceVisualizer;
     [SerializeField] private bool _dieOnAttack;
+    [SerializeField] private bool _chargeAttack;
 
     [Header ("Editor")]
     [SerializeField] private bool _drawGizmos;
@@ -155,11 +156,18 @@ public class Enemy : Lifeform
             {
                 case EnemyAttackState.Charging:
                     OnAttack?.Invoke();
-                    Debug.Log("shoot me");
                     break;
 
                 case EnemyAttackState.Not:
-                    OnChargingAttack?.Invoke();
+                    if (_chargeAttack)
+                    {
+                        OnChargingAttack?.Invoke();
+                    }
+                    else
+                    {
+                        OnAttack?.Invoke();
+                    }
+
                     break;
 
                 default:
