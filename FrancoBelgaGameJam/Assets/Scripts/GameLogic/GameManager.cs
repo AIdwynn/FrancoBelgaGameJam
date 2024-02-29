@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Turn Settings")]
     [SerializeField] float maxPlayerDistance;
+    public float EnemyRangeOffset;
     public float VisualizerScaleOffset;
     [SerializeField] int startIndex;
     [SerializeField] List<Turn> turns = new List<Turn>();
