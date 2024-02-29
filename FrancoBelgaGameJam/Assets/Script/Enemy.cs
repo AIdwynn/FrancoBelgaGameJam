@@ -9,13 +9,15 @@ public enum EnemyAttackState
     Not, Charging
 }
 
-public class Enemy : MonoBehaviour
+public class Enemy : Lifeform
 {
     [SerializeField] private NavMeshAgent _agent;
 
     [SerializeField] private float _detectionRange;
     [SerializeField] private float _maxTravelDistance;
     [SerializeField] private float _attackRange;
+
+    [SerializeField] private bool _dieOnAttack;
 
     [Header ("Editor")]
     [SerializeField] private bool _drawGizmos;
@@ -24,8 +26,6 @@ public class Enemy : MonoBehaviour
     private float _distanceTraveled;
     private float _previousRemainingDistance;
     private EnemyAttackState _attackState;
-
-    private Lifeform _health;
 
     public Action OnStop;
 
@@ -46,13 +46,15 @@ public class Enemy : MonoBehaviour
 
         OnAttack += () => { 
             _player.Hurt();
+            if (_dieOnAttack)
+            {
+                OnDeath?.Invoke();
+            }
             _attackState = EnemyAttackState.Not; };
 
         OnChargingAttack += () => { _attackState = EnemyAttackState.Charging; };
 
-        _health = GetComponent<Lifeform>();
-
-        _health.OnDeath.AddListener(KillEnemy);
+        OnDeath.AddListener(KillEnemy);
 
     }
 
