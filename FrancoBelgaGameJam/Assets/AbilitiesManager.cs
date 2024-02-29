@@ -171,6 +171,7 @@ public class AbilitiesManager : MonoBehaviour
 
             EquipAbility(abilities[currentIndex]);
             player.SwapWeapon();
+            player.ChangeMoveType(currentIndex);
         }
     }
 

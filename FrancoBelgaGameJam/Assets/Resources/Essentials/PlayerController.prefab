@@ -329,7 +329,7 @@ MonoBehaviour:
     alwaysActive: 0
     stuns: 1
     range: 13
-    aimAssist: 0.1
+    aimAssist: 0.01
     anticipation: 0.8
     recovery: 0.6
   - Name: Skip

@@ -252,9 +252,14 @@ public class PlayerController : Lifeform
         StartCoroutine(C_DeathDelay());
     }
 
+    public void ChangeMoveType(int type)
+    {
+        animator.SetFloat("WeaponState", type);
+    }
+
     IEnumerator C_DeathDelay()
     {
-        yield return new WaitForSecondsRealtime(4);
+        yield return new WaitForSecondsRealtime(1);
 
         GameManager.Instance.Restart();
     }
