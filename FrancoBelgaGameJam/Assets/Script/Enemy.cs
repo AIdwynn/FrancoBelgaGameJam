@@ -237,7 +237,6 @@ public class Enemy : Lifeform
         scream.Stop();
         OnStop?.Invoke();
         _animator.SetBool("Moving", false);
-        Debug.Log(_attackState);
 
     }
 
