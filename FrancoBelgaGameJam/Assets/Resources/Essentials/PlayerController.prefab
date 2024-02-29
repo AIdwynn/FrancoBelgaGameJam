@@ -460,7 +460,7 @@ MonoBehaviour:
     AnimationName: Tazer
     alwaysActive: 0
     stuns: 1
-    range: 13
+    range: 20
     aimAssist: 0.01
     anticipation: 0.8
     recovery: 0.6
@@ -953,7 +953,7 @@ MonoBehaviour:
     m_AmplitudeGain: 1
     m_FrequencyGain: 1
     m_Duration: 1
-    m_NoiseOffsets: {x: 0, y: 0, z: 0}
+    m_NoiseOffsets: {x: 311.5787, y: 317.13913, z: -508.96387}
 --- !u!1 &7625142705109560808
 GameObject:
   m_ObjectHideFlags: 0
