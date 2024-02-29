@@ -457,13 +457,13 @@ MonoBehaviour:
     anticipation: 0.63
     recovery: 1
   - Name: ZapGun
-    Item: {fileID: 8358466206814178125, guid: 4690451dac50c854e9282e01e45284ec, type: 3}
+    Item: {fileID: 4242414830316492873, guid: 9329f8121c3389640ba1decc2ec0fe30, type: 3}
     AnimationName: Tazer
     alwaysActive: 0
     stuns: 1
     range: 20
     aimAssist: 0.01
-    anticipation: 0.8
+    anticipation: 0.4
     recovery: 0.6
   - Name: Skip
     Item: {fileID: 2438083723998384204, guid: 22b4fb2d2d2d1484d9e40fc7ffecdf4e, type: 3}
