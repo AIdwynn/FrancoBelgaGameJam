@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ParticleLoader : MonoBehaviour
 {
+    public bool ConfettiMode = true;
+    [SerializeField] private ParticleSelfDestruct ConfettiHitParticle;
     [SerializeField] private ParticleSelfDestruct HitParticle;
     [SerializeField] private ParticleSelfDestruct DeathParticle;
     [SerializeField] private ParticleSelfDestruct GetHitParticle;
@@ -13,10 +15,11 @@ public class ParticleLoader : MonoBehaviour
 
     void Awake()
     {
-        var particle = new ParticleSelfDestruct[]
-            {HitParticle,DeathParticle,GetHitParticle,TaserParticle,EnergyCollectParticle, StunParticle};
-        new ManagerDeParticle(particle);
-        ParticleNames.Hit = HitParticle.name;
+        var hitParticle = ConfettiMode ? ConfettiHitParticle : HitParticle;
+        var particles = new ParticleSelfDestruct[]
+            {hitParticle,DeathParticle,GetHitParticle,TaserParticle,EnergyCollectParticle, StunParticle};
+        new ManagerDeParticle(particles);
+        ParticleNames.Hit = hitParticle.name;
         ParticleNames.Death = DeathParticle.name;
         ParticleNames.Taser = TaserParticle.name;
         ParticleNames.EnergyCollect = EnergyCollectParticle.name;
