@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] Transform playerStart;
+    [SerializeField] AudioSource music;
     public UIManager UIManager;
 
     public EnemyTurn EnemyTurn { get { return turns[1].GetComponent<EnemyTurn>(); } }
@@ -89,6 +91,20 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         ManagerDeScene.RestartCurrentScene();
+    }
+
+    public void Cut()
+    {
+        music.DOFade(0, 0.1f);
+
+        StartCoroutine(C_FadeInAgain());
+    }
+
+    IEnumerator C_FadeInAgain()
+    {
+        yield return new WaitForSecondsRealtime(4f);
+
+        music.DOFade(0.4f, 4f);
     }
 
     public void AddAmmo()

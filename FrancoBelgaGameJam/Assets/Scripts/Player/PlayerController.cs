@@ -18,6 +18,7 @@ public class PlayerController : Lifeform
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] AudioSource pick, chicken;
     private CameraController cameraController;
     private AbilitiesManager abilitiesManager;
 
@@ -83,9 +84,11 @@ public class PlayerController : Lifeform
                             endActionTarget.Hurt();
 
                         cameraController.Rumble();
+                        chicken.Play();
                     }
                     else
                     {
+                        pick.Play();
                         cameraController.Recoil();
                         endActionTarget.Hurt();
                     }

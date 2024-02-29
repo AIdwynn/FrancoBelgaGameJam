@@ -90,6 +90,7 @@ public class Enemy : Lifeform
         base.Die();
         ManagerDeParticle.PlayParticleByName(ParticleNames.Death, this.transform.position);
         GameManager.Instance.AddAmmo();
+        GameManager.Instance.Cut();
     }
 
     private void KillEnemy()
