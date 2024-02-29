@@ -11,6 +11,8 @@ public class PlayerTurn : Turn
 
     public override void StartTurn()
     {
+        GameManager.Player.TurnStart();
+
         visualizerScaleOffset = GameManager.VisualizerScaleOffset;
 
         distanceVisualizer.SetActive(true);

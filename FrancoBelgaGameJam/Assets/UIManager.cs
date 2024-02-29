@@ -9,7 +9,7 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI turnText;
+    [SerializeField] TextMeshProUGUI turnText, zapText;
     [SerializeField] Transform hpIconParent;
     [SerializeField] GameObject hpIcon;
     [SerializeField] SkillIcon[] icons;
@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
 
     public void Obliterate(GameObject go)
     {
-        go.transform.parent = null;
+        go.transform.SetParent(null);
 
         Destroy(go);
     }
@@ -43,6 +43,14 @@ public class UIManager : MonoBehaviour
         turnText.transform.DOKill();
         turnText.transform.localScale = Vector3.one;
         turnText.transform.DOPunchScale(Vector3.one, 0.4f);
+    }
+
+    public void UpdateZapAmount(int amount)
+    {
+        zapText.text = amount.ToString();
+        zapText.transform.DOKill();
+        zapText.transform.localScale = Vector3.one;
+        zapText.transform.DOPunchScale(Vector3.one, 0.4f);
     }
 
     #region Items

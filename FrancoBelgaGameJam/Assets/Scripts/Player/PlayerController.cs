@@ -51,6 +51,7 @@ public class PlayerController : Lifeform
     {
         CanMove = true;
         animator.SetBool("CanMove", true);
+        abilitiesManager.TurnStart();
     }
 
 
@@ -116,7 +117,10 @@ public class PlayerController : Lifeform
     private void MovementManagement(bool constrain)
     {
         if (!CanMove)
+        {
+            animator.SetBool("Moving", false);
             return;
+        }
 
         Vector3 move = Vector3.zero;
 
@@ -208,6 +212,11 @@ public class PlayerController : Lifeform
         constrainMaxDist = consDist;
     }
 
+    public void AddAmmo()
+    {
+        abilitiesManager.GainZap();
+    }
+
     public void Freeze()
     {
         CanMove = false;
@@ -234,6 +243,8 @@ public class PlayerController : Lifeform
         base.Die();
 
         animator.SetTrigger("Die");
+
+        StartCoroutine(C_DeathDelay());
     }
 
     IEnumerator C_DeathDelay()

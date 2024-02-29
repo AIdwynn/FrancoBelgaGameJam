@@ -45,7 +45,7 @@ public class Enemy : Lifeform
     {
         _player = GameManager.Instance.Player;
         _agent = GetComponent<NavMeshAgent>();
-        //animator
+        _animator = GetComponentInChildren<Animator>();
         _agent.isStopped = true;
         _attackState = EnemyAttackState.Not;
 
@@ -80,8 +80,13 @@ public class Enemy : Lifeform
     public override void Hurt()
     {
         base.Hurt();
+    }
 
+    public override void Die()
+    {
+        base.Die();
 
+        GameManager.Instance.AddAmmo();
     }
 
     private void KillEnemy()

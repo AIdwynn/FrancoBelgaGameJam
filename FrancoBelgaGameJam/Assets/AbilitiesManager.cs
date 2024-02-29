@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class AbilitiesManager : MonoBehaviour
     [SerializeField] Ability[] abilities;
 
     [Header("Settings")]
+    public int ZapAmmo;
     [SerializeField] private LayerMask enemiesLayer, whatAreWalls;
 
     [Header("References")]
@@ -22,11 +24,18 @@ public class AbilitiesManager : MonoBehaviour
     private int currentIndex;
     private GameObject currentItem;
     private string currentItemName;
+    private int originalAmmo;
 
     public void Init(PlayerController p)
     {
         player = p;
+        originalAmmo = ZapAmmo;
         EquipAbility(abilities[0]);
+    }
+
+    public void TurnStart()
+    {
+        GameManager.Instance.UIManager.UpdateZapAmount(ZapAmmo);
     }
 
     public void UpdateManager()
@@ -39,6 +48,7 @@ public class AbilitiesManager : MonoBehaviour
             return;
 
         bool canUse = false;
+        bool isZap = Array.IndexOf(abilities, current) == 1;
         var UIManager = GameManager.Instance.UIManager;
         RaycastHit hit = new RaycastHit();
 
@@ -53,14 +63,33 @@ public class AbilitiesManager : MonoBehaviour
 
             if (!Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, whatAreWalls))
             {
-                if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                if (isZap)
                 {
-                    UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
-                    canUse = true;
+                    if (CheckForZap())
+                    {
+
+                        if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                        {
+                            UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
+                            canUse = true;
+                        }
+                        else
+                        {
+                            UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                        }
+                    }
                 }
                 else
                 {
-                    UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                    if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                    {
+                        UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
+                        canUse = true;
+                    }
+                    else
+                    {
+                        UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                    }
                 }
             }
         }
@@ -71,16 +100,63 @@ public class AbilitiesManager : MonoBehaviour
             {
                 Lifeform target = hit.transform.GetComponent<Lifeform>();
 
-                if (target != null)
-                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target, current.stuns);
+                if (isZap)
+                {
+                    if (RequestZap())
+                    {
+                        if (target != null)
+                            player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target, current.stuns);
+                        else
+                            player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
+                    }
+                }
                 else
-                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
-
+                {
+                    if (target != null)
+                        player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target, current.stuns);
+                    else
+                        player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
+                }
             }
             else
             {
                 player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
             }
+        }
+    }
+
+    public void GainZap()
+    {
+        if (ZapAmmo < originalAmmo)
+        {
+            ZapAmmo++;
+            GameManager.Instance.UIManager.UpdateZapAmount(ZapAmmo);
+        }
+    }
+
+    public bool RequestZap()
+    {
+        if (ZapAmmo > 0)
+        {
+            ZapAmmo--;
+            GameManager.Instance.UIManager.UpdateZapAmount(ZapAmmo);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool CheckForZap()
+    {
+        if (ZapAmmo > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

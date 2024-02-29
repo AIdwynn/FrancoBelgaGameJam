@@ -7,7 +7,8 @@ public class ParticleSelfDestruct : MonoBehaviour
     [SerializeField] private float lifeTime = 1;
     public void StartCountDown()
     {
-        StartCoroutine(CountDown());
+        if(lifeTime != -1)
+            StartCoroutine(CountDown());
     }
 
     public IEnumerator CountDown()
