@@ -72,14 +72,23 @@ public class PlayerController : Lifeform
                     if (stuns)
                     {
                         Enemy e = endActionTarget.GetComponent<Enemy>();
-                        
+
                         if (e != null)
+                        {
                             e.IsStunned = true;
+                            e.StunnedParticle = ManagerDeParticle.PlayParticleByName(ParticleNames.Stun, e.transform.position);
+                        }
+                            
                         else
                             endActionTarget.Hurt();
+
+                        cameraController.Rumble();
                     }
                     else
+                    {
+                        cameraController.Recoil();
                         endActionTarget.Hurt();
+                    }
                 }
 
                 if (endActionRecovery > 0)
@@ -247,9 +256,14 @@ public class PlayerController : Lifeform
         StartCoroutine(C_DeathDelay());
     }
 
+    public void ChangeMoveType(int type)
+    {
+        animator.SetFloat("WeaponState", type);
+    }
+
     IEnumerator C_DeathDelay()
     {
-        yield return new WaitForSecondsRealtime(4);
+        yield return new WaitForSecondsRealtime(1);
 
         GameManager.Instance.Restart();
     }
