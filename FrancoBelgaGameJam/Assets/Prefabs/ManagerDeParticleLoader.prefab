@@ -54,3 +54,5 @@ MonoBehaviour:
     type: 3}
   EnergyCollectParticle: {fileID: -3182805239255737422, guid: ef3b3b93042d4d34f8e52e9640582c3e,
     type: 3}
+  StunParticle: {fileID: 737215357940725662, guid: 7b707a6b4a8401f4cbbac86f511a344a,
+    type: 3}

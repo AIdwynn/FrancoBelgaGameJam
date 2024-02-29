@@ -42,5 +42,6 @@ public static class ParticleNames
     public static string GetHit = "";
     public static string Taser = "";
     public static string EnergyCollect = "";
+    public static string Stun = "";
 }
     
