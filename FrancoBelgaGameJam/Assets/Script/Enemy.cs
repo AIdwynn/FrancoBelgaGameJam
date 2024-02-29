@@ -18,7 +18,7 @@ public class Enemy : Lifeform
     [SerializeField] private float _attackRange;
 
     [Header("References")]
-    [SerializeField] AudioSource scream;
+    [SerializeField] AudioSource scream, attack;
     [SerializeField] GameObject distanceVisualizer, blood;
     [SerializeField] Transform head;
     [SerializeField] private bool _dieOnAttack;
@@ -64,7 +64,8 @@ public class Enemy : Lifeform
                 OnDeath?.Invoke();
             }
             _attackState = EnemyAttackState.Not;
-            _animator.SetTrigger("Attack");    
+            _animator.SetTrigger("Attack");
+            attack.Play();
         };
 
         OnChargingAttack += () => { _attackState = EnemyAttackState.Charging; };
