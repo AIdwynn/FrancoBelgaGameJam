@@ -19,6 +19,7 @@ public class AbilitiesManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Transform weaponsParent;
+    [SerializeField] AudioSource swap;
 
     private PlayerController player;
     private int currentIndex;
@@ -172,6 +173,7 @@ public class AbilitiesManager : MonoBehaviour
             EquipAbility(abilities[currentIndex]);
             player.SwapWeapon();
             player.ChangeMoveType(currentIndex);
+            swap.Play();
         }
     }
 
