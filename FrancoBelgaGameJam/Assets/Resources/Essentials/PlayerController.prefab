@@ -454,7 +454,7 @@ MonoBehaviour:
     stuns: 0
     range: 2.5
     aimAssist: 0.6
-    anticipation: 0.63
+    anticipation: 0.2
     recovery: 1
   - Name: ZapGun
     Item: {fileID: 4242414830316492873, guid: 9329f8121c3389640ba1decc2ec0fe30, type: 3}

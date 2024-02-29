@@ -45,6 +45,7 @@ public class Enemy : Lifeform
     public bool IsStunned { get; set; }
     public ParticleSelfDestruct StunnedParticle;
     public bool IsMoving { get { return !_agent.isStopped; } }
+    public bool ReviveNextTurn { get { return reviveNextTurn; } }
 
     #region UnityMethods
 
@@ -124,7 +125,8 @@ public class Enemy : Lifeform
 
     public void UpdateVisualizer()
     {
-        distanceVisualizer.SetActive(true);
+        if (!reviveNextTurn)
+            distanceVisualizer.SetActive(true);
 
         var dist = _maxTravelDistance * GameManager.Instance.VisualizerScaleOffset + _attackRange + GameManager.Instance.EnemyRangeOffset;
         distanceVisualizer.transform.position = transform.position + Vector3.up * -1;
@@ -154,6 +156,8 @@ public class Enemy : Lifeform
                 original.SetActive(true);
 
             blood.SetActive(true);
+
+            reviveNextTurn = false;
         }
 
         scream.Play();
