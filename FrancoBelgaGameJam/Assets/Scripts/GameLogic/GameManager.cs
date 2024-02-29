@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        ManagerDeScene.LoadMainMenu();
+        ManagerDeScene.RestartCurrentScene();
     }
 
     public void AddAmmo()

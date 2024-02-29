@@ -21,6 +21,7 @@ public class Enemy : Lifeform
     [SerializeField] GameObject distanceVisualizer;
     [SerializeField] private bool _dieOnAttack;
     [SerializeField] private bool _chargeAttack;
+    [SerializeField] GameObject ragdoll;
 
     [Header ("Editor")]
     [SerializeField] private bool _drawGizmos;
@@ -93,12 +94,16 @@ public class Enemy : Lifeform
 
     private void KillEnemy()
     {
+        GameObject go = Instantiate(ragdoll);
+        go.transform.position = transform.position;
+        go.transform.rotation = transform.rotation;
         Destroy(gameObject);
     }
 
     public void TurnStart()
     {
         distanceVisualizer.SetActive(false);
+        _animator.SetBool("Moving", true);
     }
 
     public void UpdateVisualizer()
@@ -116,7 +121,8 @@ public class Enemy : Lifeform
         {
             IsStunned = false;
             Destroy(StunnedParticle.gameObject);
-            OnStop?.Invoke(); 
+            OnStop?.Invoke();
+            _animator.SetBool("Moving", false);
             return;
         } 
 
@@ -124,7 +130,8 @@ public class Enemy : Lifeform
 
         if (distanceEnemyPlayer > _detectionRange)
         {
-            OnStop?.Invoke(); 
+            OnStop?.Invoke();
+            _animator.SetBool("Moving", false);
             return;
         }
 
@@ -195,7 +202,7 @@ public class Enemy : Lifeform
         }
 
         OnStop?.Invoke();
-
+        _animator.SetBool("Moving", false);
         Debug.Log(_attackState);
 
     }
