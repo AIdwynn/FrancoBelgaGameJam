@@ -157,8 +157,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989918690899584551}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.074935205, y: -0, z: -0, w: 0.99718845}
-  m_LocalPosition: {x: 0.125, y: 1.717, z: 0.02}
+  m_LocalRotation: {x: 0.10710737, y: -0, z: -0, w: 0.9942475}
+  m_LocalPosition: {x: -1.285, y: 1.722, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -195,7 +195,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 0
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 94.25695, y: 0, z: 95.89355, w: 0}
+  m_margin: {x: 94.25695, y: 0, z: 187.40097, w: 20.9902}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2142,7 +2142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9eca76013afc146bd7b0407ef33d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EasyMode: 1
+  EasyMode: 0
   maxPlayerDistance: 10
   VisualizerScaleOffset: 2
   startIndex: 0
