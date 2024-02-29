@@ -50,6 +50,8 @@ public class PlayerTurn : Turn
         {
             CheckDistanceTravelled(player);
             UpdateVisualizer(player.transform.position);
+            GameManager.UIManager.UpdateMovementBar(DistanceTravelled);
+
         }
     }
 

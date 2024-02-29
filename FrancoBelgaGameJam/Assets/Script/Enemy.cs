@@ -204,7 +204,6 @@ public class Enemy : Lifeform
 
         OnStop?.Invoke();
         _animator.SetBool("Moving", false);
-        Debug.Log(_attackState);
 
     }
 
