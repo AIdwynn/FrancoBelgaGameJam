@@ -72,14 +72,19 @@ public class PlayerController : Lifeform
                     if (stuns)
                     {
                         Enemy e = endActionTarget.GetComponent<Enemy>();
-                        
+
                         if (e != null)
                             e.IsStunned = true;
                         else
                             endActionTarget.Hurt();
+
+                        cameraController.Rumble();
                     }
                     else
+                    {
+                        cameraController.Recoil();
                         endActionTarget.Hurt();
+                    }
                 }
 
                 if (endActionRecovery > 0)
