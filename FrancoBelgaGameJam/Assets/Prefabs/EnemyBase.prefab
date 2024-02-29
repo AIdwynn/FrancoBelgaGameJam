@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 989255117289854235}
   - component: {fileID: 6602708049846791717}
   - component: {fileID: 4867203694929213150}
-  - component: {fileID: -6999060068928776737}
+  - component: {fileID: 777824642833693957}
   m_Layer: 6
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c590f6bdcd1cb4e4984567faff44b4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
+  HP: 1
   OnHurt:
     m_PersistentCalls:
       m_Calls: []
@@ -162,7 +162,7 @@ MonoBehaviour:
   _dieOnAttack: 0
   _chargeAttack: 0
   _drawGizmos: 1
---- !u!114 &-6999060068928776737
+--- !u!114 &777824642833693957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,16 +171,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993380830561791051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 042f19ccc87a2a742bfaba4adc68ebe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
-  OnHurt:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &4040174330098687475
 GameObject:
   m_ObjectHideFlags: 0
