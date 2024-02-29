@@ -453,7 +453,7 @@ MonoBehaviour:
     stuns: 0
     range: 2.5
     aimAssist: 0.6
-    anticipation: 0.6
+    anticipation: 0.63
     recovery: 1
   - Name: ZapGun
     Item: {fileID: 8358466206814178125, guid: 4690451dac50c854e9282e01e45284ec, type: 3}
@@ -562,10 +562,10 @@ MonoBehaviour:
   - Name: Base
     mouseSensitivity: 150
     controllerSensitivity: 100
-    Xmin: -180
-    Xmax: 180
-    Ymin: -65
-    Ymax: -45
+    Xmin: -65
+    Xmax: 45
+    Ymin: 0
+    Ymax: 0
   MainCam: {fileID: 0}
   recoilSource: {fileID: 7038246518508318733}
   hurtSource: {fileID: 1619746367442137791}
