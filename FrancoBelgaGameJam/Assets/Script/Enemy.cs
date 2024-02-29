@@ -90,6 +90,7 @@ public class Enemy : Lifeform
         base.Die();
         ManagerDeParticle.PlayParticleByName(ParticleNames.Death, this.transform.position);
         GameManager.Instance.AddAmmo();
+        GameManager.Instance.Cut();
     }
 
     private void KillEnemy()
@@ -110,7 +111,7 @@ public class Enemy : Lifeform
     {
         distanceVisualizer.SetActive(true);
 
-        var dist = _maxTravelDistance * GameManager.Instance.VisualizerScaleOffset;
+        var dist = _maxTravelDistance * GameManager.Instance.VisualizerScaleOffset + _attackRange;
         distanceVisualizer.transform.position = transform.position + Vector3.up * -1;
         distanceVisualizer.transform.localScale = new Vector3(dist, 1, dist);
     }
