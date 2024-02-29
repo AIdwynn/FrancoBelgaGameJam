@@ -21,6 +21,8 @@ public class PlayerTurn : Turn
         {
             item.UpdateVisualizer();
         }
+
+        GameManager.UIManager.UpdateHP(GameManager.Player.HP);
     }
 
     public override void UpdateTurn()

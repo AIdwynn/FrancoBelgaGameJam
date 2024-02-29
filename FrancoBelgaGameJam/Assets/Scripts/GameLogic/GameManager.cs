@@ -86,6 +86,11 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    public void Restart()
+    {
+        ManagerDeScene.LoadMainMenu();
+    }
+
     #region Turn Start/End
     public void StartTurn()
     {
@@ -97,6 +102,7 @@ public class GameManager : MonoBehaviour
         currentTurn = turns[currentTurnIndex];
 
         currentTurn.StartTurn();
+        UIManager.UpdateTurnText(currentTurn.name);
     }
 
     public void StartTurn(bool dontIncrement)
@@ -110,6 +116,7 @@ public class GameManager : MonoBehaviour
         currentTurn = turns[currentTurnIndex];
 
         currentTurn.StartTurn();
+        UIManager.UpdateTurnText(currentTurn.name);
     }
 
     public void EndTurn()
