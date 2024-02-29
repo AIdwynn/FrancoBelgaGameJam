@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662496658863738206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -138,14 +138,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3665290580669917508}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.074935205, y: 0, z: 0, w: 0.99718845}
-  m_LocalPosition: {x: 0.125, y: 1.717, z: 0.02}
+  m_LocalRotation: {x: 0.10710737, y: -0, z: -0, w: 0.9942475}
+  m_LocalPosition: {x: 0.125, y: 1.722, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1524192292703002559}
   m_Father: {fileID: 8616432655179308319}
-  m_LocalEulerAnglesHint: {x: 8.595, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 12.297, y: 0, z: 0}
 --- !u!1 &3751666675386299704
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +243,6 @@ GameObject:
   - component: {fileID: 796235362911662758}
   - component: {fileID: 2276877435519246482}
   - component: {fileID: 7040077837176908146}
-  - component: {fileID: 6465187888621653682}
   m_Layer: 3
   m_Name: PlayerController
   m_TagString: Player
@@ -316,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - Name: Pickaxe
-    Item: {fileID: 3606485536127316200, guid: c98de629924ad9f4cbdd3f11728aa8fa, type: 3}
+    Item: {fileID: 5827745275612758405, guid: b1dda335e1d663242903c28e1f151ac6, type: 3}
     AnimationName: Pickaxe
     alwaysActive: 0
     stuns: 0
@@ -325,7 +324,7 @@ MonoBehaviour:
     anticipation: 0.6
     recovery: 1
   - Name: ZapGun
-    Item: {fileID: 6557889055527003548, guid: b022217e88433f841bd04a6f69100d70, type: 3}
+    Item: {fileID: 8358466206814178125, guid: 4690451dac50c854e9282e01e45284ec, type: 3}
     AnimationName: Tazer
     alwaysActive: 0
     stuns: 1
@@ -334,8 +333,8 @@ MonoBehaviour:
     anticipation: 0.8
     recovery: 0.6
   - Name: Skip
-    Item: {fileID: 393969351240433644, guid: 3ef82e92dfd7cd44d8c88fd6cdbd664d, type: 3}
-    AnimationName: No
+    Item: {fileID: 2438083723998384204, guid: 22b4fb2d2d2d1484d9e40fc7ffecdf4e, type: 3}
+    AnimationName: Skip
     alwaysActive: 1
     stuns: 0
     range: 0
@@ -349,7 +348,7 @@ MonoBehaviour:
   whatAreWalls:
     serializedVersion: 2
     m_Bits: 128
-  weaponsParent: {fileID: 936301722416657075}
+  weaponsParent: {fileID: 7470981731724657033}
 --- !u!143 &7040077837176908146
 CharacterController:
   m_ObjectHideFlags: 0
@@ -376,27 +375,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!95 &6465187888621653682
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3824875662531684495}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1a112e716265836488974c042bd1a44e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4764994693559801892
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +569,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
-    NearClipPlane: 0.3
+    NearClipPlane: 0.01
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -759,17 +737,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4f65d9d91c848b44d992402ec089e33e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f65d9d91c848b44d992402ec089e33e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f65d9d91c848b44d992402ec089e33e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.39
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f65d9d91c848b44d992402ec089e33e,
         type: 3}
@@ -811,11 +789,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_Arm
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 4f65d9d91c848b44d992402ec089e33e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f65d9d91c848b44d992402ec089e33e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6743075281041817859}
   m_SourcePrefab: {fileID: 100100000, guid: 4f65d9d91c848b44d992402ec089e33e, type: 3}
+--- !u!1 &7375677261862585555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f65d9d91c848b44d992402ec089e33e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7681666199883872642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6743075281041817859
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7375677261862585555}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1a112e716265836488974c042bd1a44e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &7470981731724657033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8271844808808302581, guid: 4f65d9d91c848b44d992402ec089e33e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7681666199883872642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7858917452335193705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4f65d9d91c848b44d992402ec089e33e,
