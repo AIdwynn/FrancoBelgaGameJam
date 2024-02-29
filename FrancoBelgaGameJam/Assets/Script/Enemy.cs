@@ -111,7 +111,7 @@ public class Enemy : Lifeform
     {
         distanceVisualizer.SetActive(true);
 
-        var dist = _maxTravelDistance * GameManager.Instance.VisualizerScaleOffset + _attackRange;
+        var dist = _maxTravelDistance * GameManager.Instance.VisualizerScaleOffset + _attackRange + GameManager.Instance.EnemyRangeOffset;
         distanceVisualizer.transform.position = transform.position + Vector3.up * -1;
         distanceVisualizer.transform.localScale = new Vector3(dist, 1, dist);
     }
