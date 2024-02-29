@@ -21,6 +21,8 @@ public class PlayerTurn : Turn
         {
             item.UpdateVisualizer();
         }
+
+        GameManager.UIManager.UpdateHP(GameManager.Player.HP);
     }
 
     public override void UpdateTurn()
@@ -35,6 +37,9 @@ public class PlayerTurn : Turn
         if (GameManager.EasyMode)
         {
             var dist = GameManager.MaxPlayerDistance * visualizerScaleOffset;
+            distanceVisualizer.transform.position = new Vector3(distanceVisualizer.transform.position.x,
+                GameManager.Player.transform.position.y, distanceVisualizer.transform.position.z);
+
             distanceVisualizer.transform.localScale = new Vector3(dist, 1, dist);
 
             player.UpdateConstraint(distanceVisualizer.transform.position, dist/2);

@@ -225,6 +225,8 @@ public class PlayerController : Lifeform
 
         cameraController.HurtShake();
         animator.SetTrigger("Hurt");
+
+        GameManager.Instance.UIManager.UpdateHP(HP);
     }
 
     public override void Die()
@@ -232,6 +234,13 @@ public class PlayerController : Lifeform
         base.Die();
 
         animator.SetTrigger("Die");
+    }
+
+    IEnumerator C_DeathDelay()
+    {
+        yield return new WaitForSecondsRealtime(4);
+
+        GameManager.Instance.Restart();
     }
 
     private void InitializeMoveDir()

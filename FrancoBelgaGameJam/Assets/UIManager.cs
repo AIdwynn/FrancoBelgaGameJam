@@ -1,14 +1,51 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI turnText;
+    [SerializeField] Transform hpIconParent;
+    [SerializeField] GameObject hpIcon;
     [SerializeField] SkillIcon[] icons;
     [SerializeField] Color ready, unusable, disabled;
 
+    public void UpdateHP(int value)
+    {
+        for (var i = hpIconParent.childCount - 1; i >= 0; i--)
+        {
+            var objectA = hpIconParent.GetChild(i);
+            Obliterate(objectA.gameObject);
+        }
+
+        for (int i = 0; i < value; i++)
+        {
+            GameObject go = Instantiate(hpIcon);
+            go.transform.SetParent(hpIconParent, false);
+        }
+    }
+
+    public void Obliterate(GameObject go)
+    {
+        go.transform.parent = null;
+
+        Destroy(go);
+    }
+
+    public void UpdateTurnText(string content)
+    {
+        turnText.text = content;
+        turnText.transform.DOKill();
+        turnText.transform.localScale = Vector3.one;
+        turnText.transform.DOPunchScale(Vector3.one, 0.4f);
+    }
+
+    #region Items
     public void EquipIcon(string Name)
     {
         foreach (var item in icons)
@@ -50,6 +87,7 @@ public class UIManager : MonoBehaviour
     { 
         return Array.Find(icons, icon => icon.name == Name);
     }
+    #endregion
 }
 
 

@@ -26,6 +26,7 @@ public class Enemy : Lifeform
     [SerializeField] private bool _drawGizmos;
 
     private PlayerController _player;
+    private Animator _animator;
     private float _distanceTraveled;
     private float _previousRemainingDistance;
     private EnemyAttackState _attackState;
@@ -44,6 +45,7 @@ public class Enemy : Lifeform
     {
         _player = GameManager.Instance.Player;
         _agent = GetComponent<NavMeshAgent>();
+        //animator
         _agent.isStopped = true;
         _attackState = EnemyAttackState.Not;
 
@@ -73,6 +75,15 @@ public class Enemy : Lifeform
     }
 
     #endregion
+
+
+    public override void Hurt()
+    {
+        base.Hurt();
+
+
+    }
+
     private void KillEnemy()
     {
         Destroy(gameObject);
