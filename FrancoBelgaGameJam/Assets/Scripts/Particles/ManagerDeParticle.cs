@@ -34,10 +34,11 @@ public class ManagerDeParticle
         return newOne;
     }
     
-    public static ParticleSelfDestruct PlayParticleByName(string name, Vector3 position, Vector3 rotation)
+    public static ParticleSelfDestruct PlayParticleByName(string name, Vector3 position, Vector3 forward)
     {
         var original = Instance.ParticleDictionary[name];
         var newOne = GameObject.Instantiate(original, position, Quaternion.identity);
+        newOne.transform.forward = forward;
         newOne.StartCountDown();
         return newOne;
     }
