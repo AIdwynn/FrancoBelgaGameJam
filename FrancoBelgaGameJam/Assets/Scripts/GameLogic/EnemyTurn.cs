@@ -1,18 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyTurn : Turn
 {
     private Enemy[] _enemies = new Enemy[0];
+    private Enemy[] _doneEnemies = new Enemy[10];
+
+    private int _index = 0; 
 
     private void Start()
     {
         GetAllEnemies();
         foreach (Enemy enemy in _enemies)
         {
-            enemy.OnStop += () => CheckForAllEnemies();
+            enemy.OnStop += () => CheckForAllEnemies(enemy);
         }
     }
 
@@ -23,9 +27,18 @@ public class EnemyTurn : Turn
 
     public override void StartTurn()
     {
+        _index = 0;
+        GetAllEnemies();
+        _doneEnemies = new Enemy[_enemies.Length];
+
         foreach (Enemy enemy in _enemies)
         {
             enemy.Activate();
+        }
+
+        if(_enemies.Length == 0)
+        {
+            GameManager.EndTurn();
         }
     }
 
@@ -39,23 +52,32 @@ public class EnemyTurn : Turn
 
     }
 
-    public void CheckForAllEnemies()
+    public void CheckForAllEnemies(Enemy addToDone)
     {
-        bool canEnd = true;
-
-        foreach(Enemy enemy in _enemies)
+        if(_doneEnemies.GetValue(_index) == null)
         {
-            if (enemy.IsMoving)
+            if (!_doneEnemies.Contains(addToDone))
             {
-                canEnd = false;
+                _doneEnemies.SetValue(addToDone, _index);
+
+                _index++;
+            }
+        }
+        bool stillHasNull = false;
+
+        foreach (Enemy enemy in _doneEnemies)
+        {
+            if (enemy == null)
+            {
+                stillHasNull = true;
                 break;
             }
-
         }
 
-        if (canEnd)
+        if (_doneEnemies.Length == 0 || !stillHasNull)
         {
             GameManager.EndTurn();
         }
+
     }
 }

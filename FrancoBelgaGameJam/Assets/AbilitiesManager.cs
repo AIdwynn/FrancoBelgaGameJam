@@ -13,7 +13,7 @@ public class AbilitiesManager : MonoBehaviour
     [SerializeField] Ability[] abilities;
 
     [Header("Settings")]
-    [SerializeField] private LayerMask enemiesLayer;
+    [SerializeField] private LayerMask enemiesLayer, whatAreWalls;
 
     [Header("References")]
     [SerializeField] private Transform weaponsParent;
@@ -51,14 +51,17 @@ public class AbilitiesManager : MonoBehaviour
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-            if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+            if (!Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, whatAreWalls))
             {
-                UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
-                canUse = true;
-            }
-            else
-            {
-                UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                {
+                    UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
+                    canUse = true;
+                }
+                else
+                {
+                    UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                }
             }
         }
 
@@ -69,7 +72,7 @@ public class AbilitiesManager : MonoBehaviour
                 Lifeform target = hit.transform.GetComponent<Lifeform>();
 
                 if (target != null)
-                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target);
+                    player.EndTurnAttack(current.Name, current.anticipation, current.recovery, target, current.stuns);
                 else
                     player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
 
@@ -119,6 +122,6 @@ public class Ability
     public string Name;
     public GameObject Item;
     public string AnimationName;
-    public bool alwaysActive;
+    public bool alwaysActive, stuns;
     public float range, aimAssist, anticipation, recovery;
 }
