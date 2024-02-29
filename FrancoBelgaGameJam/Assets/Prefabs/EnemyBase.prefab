@@ -111,7 +111,6 @@ MonoBehaviour:
   _dieOnAttack: 0
   _chargeAttack: 0
   ragdoll: {fileID: 7863496269917724449, guid: 59bf0127874283e40806906ce5d695f9, type: 3}
-  death: {fileID: 842958747667239974}
   _drawGizmos: 1
   StunnedParticle: {fileID: 0}
 --- !u!114 &777824642833693957
@@ -358,6 +357,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4366515546467617943}
     m_Modifications:
+    - target: {fileID: -8821362698126891589, guid: c58d9c0ab5e288440b33261ae4b4054e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d412078e92a05b34cbeba1e33fb5cc34, type: 2}
     - target: {fileID: -8679921383154817045, guid: c58d9c0ab5e288440b33261ae4b4054e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -408,11 +412,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7849812534765015462, guid: c58d9c0ab5e288440b33261ae4b4054e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d412078e92a05b34cbeba1e33fb5cc34, type: 2}
     - target: {fileID: 919132149155446097, guid: c58d9c0ab5e288440b33261ae4b4054e,
         type: 3}
       propertyPath: m_Name
       value: SK_Mob1
       objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: c58d9c0ab5e288440b33261ae4b4054e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 405111c2889b10f419f652bb5aeea2ff, type: 2}
     - target: {fileID: 5866666021909216657, guid: c58d9c0ab5e288440b33261ae4b4054e,
         type: 3}
       propertyPath: m_Controller
@@ -423,6 +437,11 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9068387832599900385, guid: c58d9c0ab5e288440b33261ae4b4054e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d412078e92a05b34cbeba1e33fb5cc34, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
