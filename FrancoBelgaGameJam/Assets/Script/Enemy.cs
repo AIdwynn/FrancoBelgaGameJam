@@ -37,6 +37,7 @@ public class Enemy : Lifeform
     public Action OnAttack;
 
     public bool IsStunned { get; set; }
+    public ParticleSelfDestruct StunnedParticle;
     public bool IsMoving { get { return !_agent.isStopped; } }
 
     #region UnityMethods
@@ -79,13 +80,14 @@ public class Enemy : Lifeform
 
     public override void Hurt()
     {
+        ManagerDeParticle.PlayParticleByName(ParticleNames.Hit, this.transform.position);
         base.Hurt();
     }
 
     public override void Die()
     {
         base.Die();
-
+        ManagerDeParticle.PlayParticleByName(ParticleNames.Death, this.transform.position);
         GameManager.Instance.AddAmmo();
     }
 
@@ -113,6 +115,7 @@ public class Enemy : Lifeform
         if (IsStunned) // if enemy is stunned then don't activate enemy
         {
             IsStunned = false;
+            Destroy(StunnedParticle.gameObject);
             OnStop?.Invoke(); 
             return;
         } 

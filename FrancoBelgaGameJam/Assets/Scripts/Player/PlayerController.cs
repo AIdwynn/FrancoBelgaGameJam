@@ -74,7 +74,11 @@ public class PlayerController : Lifeform
                         Enemy e = endActionTarget.GetComponent<Enemy>();
 
                         if (e != null)
+                        {
                             e.IsStunned = true;
+                            e.StunnedParticle = ManagerDeParticle.PlayParticleByName(ParticleNames.Stun, e.transform.position);
+                        }
+                            
                         else
                             endActionTarget.Hurt();
 
