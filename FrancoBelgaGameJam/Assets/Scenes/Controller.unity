@@ -1526,21 +1526,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2276877435519246482, guid: 4118cfc88b9572141b0ff41bf2f6768d,
-        type: 3}
-      propertyPath: abilities.Array.data[1].stuns
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276877435519246482, guid: 4118cfc88b9572141b0ff41bf2f6768d,
-        type: 3}
-      propertyPath: abilities.Array.data[1].recovery
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276877435519246482, guid: 4118cfc88b9572141b0ff41bf2f6768d,
-        type: 3}
-      propertyPath: abilities.Array.data[1].anticipation
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 3824875662531684495, guid: 4118cfc88b9572141b0ff41bf2f6768d,
         type: 3}
       propertyPath: m_Name
