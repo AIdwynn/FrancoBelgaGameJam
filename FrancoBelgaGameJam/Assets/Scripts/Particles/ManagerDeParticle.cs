@@ -33,6 +33,14 @@ public class ManagerDeParticle
         newOne.StartCountDown();
         return newOne;
     }
+    
+    public static ParticleSelfDestruct PlayParticleByName(string name, Vector3 position, Vector3 rotation)
+    {
+        var original = Instance.ParticleDictionary[name];
+        var newOne = GameObject.Instantiate(original, position, Quaternion.identity);
+        newOne.StartCountDown();
+        return newOne;
+    }
 }
 
 public static class ParticleNames
