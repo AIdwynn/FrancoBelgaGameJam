@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         {
             item.GameManager = this;
         }
-
+        new ManagerDeScene().Awake();
         Destroy(playerStart.gameObject);
     }
 
@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
         Player.Init();
 
         StartTurn(true);
+        ManagerDeScene.Instance.Start();
     }
 
     private void Update()
