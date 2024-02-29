@@ -91,6 +91,11 @@ public class GameManager : MonoBehaviour
         ManagerDeScene.LoadMainMenu();
     }
 
+    public void AddAmmo()
+    {
+        Player.AddAmmo();
+    }
+
     #region Turn Start/End
     public void StartTurn()
     {
