@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(4f);
 
-        music.DOFade(0.4f, 4f);
+        music.DOFade(0.2f, 4f);
     }
 
     public void AddAmmo()
