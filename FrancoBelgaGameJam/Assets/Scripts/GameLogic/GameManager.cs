@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
     public void AddAmmo()
     {
         Player.AddAmmo();
+        ManagerDeParticle.PlayParticleByName(ParticleNames.EnergyCollect, Player.transform.position);
     }
 
     #region Turn Start/End
