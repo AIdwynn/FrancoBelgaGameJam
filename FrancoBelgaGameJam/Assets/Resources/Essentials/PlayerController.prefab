@@ -318,6 +318,7 @@ MonoBehaviour:
     Item: {fileID: 3606485536127316200, guid: c98de629924ad9f4cbdd3f11728aa8fa, type: 3}
     AnimationName: Pickaxe
     alwaysActive: 0
+    stuns: 0
     range: 2.5
     aimAssist: 1.4
     anticipation: 0.6
@@ -326,14 +327,16 @@ MonoBehaviour:
     Item: {fileID: 6557889055527003548, guid: b022217e88433f841bd04a6f69100d70, type: 3}
     AnimationName: Tazer
     alwaysActive: 0
+    stuns: 1
     range: 13
     aimAssist: 0.7
-    anticipation: 1
-    recovery: 1
+    anticipation: 0.8
+    recovery: 0.6
   - Name: Skip
     Item: {fileID: 393969351240433644, guid: 3ef82e92dfd7cd44d8c88fd6cdbd664d, type: 3}
     AnimationName: No
     alwaysActive: 1
+    stuns: 0
     range: 0
     aimAssist: 0
     anticipation: 1
@@ -341,6 +344,9 @@ MonoBehaviour:
   enemiesLayer:
     serializedVersion: 2
     m_Bits: 64
+  whatAreWalls:
+    serializedVersion: 2
+    m_Bits: 128
   weaponsParent: {fileID: 936301722416657075}
 --- !u!143 &7040077837176908146
 CharacterController:
