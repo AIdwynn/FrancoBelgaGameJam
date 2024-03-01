@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7818027792583586014}
   - component: {fileID: 7787020434532775248}
   - component: {fileID: 9139086792943175040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9043316022812012218}
   - component: {fileID: 8059419973138607483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tongue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 7465313593320954009}
   - component: {fileID: 6795925991270892194}
   - component: {fileID: 8241567995600666159}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm_R_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 1898121683674740539}
   - component: {fileID: 4659515583027556949}
   - component: {fileID: 7992521148981218986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8698390228586042048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ear_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 6733635094305552548}
   - component: {fileID: 7714516977524142800}
   - component: {fileID: 1394644623270262194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Knee_R_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 306841374706727802}
   - component: {fileID: 4180372339887151616}
   - component: {fileID: 1114061662746925329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 4493144851428242087}
   - component: {fileID: 9018819142019460546}
   - component: {fileID: 4429595607840005374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,7 +1024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8857642041342521340}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8016335619246109208}
   - component: {fileID: 6039492135131733877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eyebrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 6627933992860973988}
   - component: {fileID: 1385042498867465985}
   - component: {fileID: 9016105077431376912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1234,7 +1234,7 @@ GameObject:
   - component: {fileID: 6086673865942366898}
   - component: {fileID: 6496259861046184309}
   - component: {fileID: 6848207708332304793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5563344203521268500}
   - component: {fileID: 2029980701115722161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,7 +1491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2958738896975824170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ear_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 2326161368146828166}
   - component: {fileID: 7120043343555357888}
   - component: {fileID: 7445260384388148056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1656,7 +1656,7 @@ GameObject:
   - component: {fileID: 7765119375280814822}
   - component: {fileID: 2261539876156276544}
   - component: {fileID: 8172491349593938900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1839,7 +1839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7610643489975396093}
   - component: {fileID: 8637262002220609685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: monster-die
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1969,7 +1969,7 @@ GameObject:
   - component: {fileID: 8362776673546484282}
   - component: {fileID: 5989536645379705399}
   - component: {fileID: 6155492224969681901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2100,7 +2100,7 @@ GameObject:
   - component: {fileID: 2384288746151058467}
   - component: {fileID: 6763683058923408885}
   - component: {fileID: 70087171228488017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2281,7 +2281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2061230908494680979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2313,7 +2313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6331078662658365043}
   - component: {fileID: 1342063336824683997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChildFriendlyFilter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2363,7 +2363,7 @@ GameObject:
   - component: {fileID: 2300350183847255498}
   - component: {fileID: 9151556100972005513}
   - component: {fileID: 1192573603639924361}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2546,7 +2546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871404205977669493}
   - component: {fileID: 1680940356383758522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2607,7 +2607,7 @@ GameObject:
   - component: {fileID: 2636287979817662876}
   - component: {fileID: 8860951691750938497}
   - component: {fileID: 5577484685048496620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm_L_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2734,7 +2734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259514020414038677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ragdoll1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2775,7 +2775,7 @@ GameObject:
   - component: {fileID: 6742587409768616785}
   - component: {fileID: 1110666147541656271}
   - component: {fileID: 5387896742323058840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Knee_L_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2904,7 +2904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9025280251591898172}
   - component: {fileID: 6773237951168747899}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: element
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3002,7 +3002,7 @@ GameObject:
   - component: {fileID: 5751709251115967227}
   - component: {fileID: 3366083497790749406}
   - component: {fileID: 4358104687287450577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3131,7 +3131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3061139598410360431}
   - component: {fileID: 1320132632377019365}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3233,9 +3233,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6331078662658365043}
     m_Modifications:
+    - target: {fileID: 1000011105442200, guid: 5690bb0c7021654438dfe7672e3a60d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012188286968, guid: 5690bb0c7021654438dfe7672e3a60d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013355911406, guid: 5690bb0c7021654438dfe7672e3a60d5, type: 3}
       propertyPath: m_Name
       value: Confetti
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013355911406, guid: 5690bb0c7021654438dfe7672e3a60d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013555257782, guid: 5690bb0c7021654438dfe7672e3a60d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011382548710, guid: 5690bb0c7021654438dfe7672e3a60d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3302,9 +3318,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6331078662658365043}
     m_Modifications:
+    - target: {fileID: 1000011105442200, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012188286968, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
       propertyPath: m_Name
       value: BloodSprayFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013555257782, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011382548710, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
       propertyPath: m_LocalPosition.x

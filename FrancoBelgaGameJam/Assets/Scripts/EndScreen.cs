@@ -25,7 +25,7 @@ public class EndScreen : MonoBehaviour
 
     IEnumerator C_Restart()
     {
-        yield return new WaitForSecondsRealtime(8f);
+        yield return new WaitForSecondsRealtime(12f);
 
         ManagerDeScene.LoadMainMenu();
     }
