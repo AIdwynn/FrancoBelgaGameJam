@@ -93,7 +93,7 @@ public class Enemy : Lifeform
         ManagerDeParticle.PlayParticleByName(ParticleNames.Hit, this.transform.position);
         base.Hurt();
         GameManager.Instance.Cut();
-        if (HP > 0 && head != null)
+        if (HP > 0 && head != null && !reviveNextTurn)
         {
             head.transform.localScale = Vector3.zero;
             IsStunned = true;

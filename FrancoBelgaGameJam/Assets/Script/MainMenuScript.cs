@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
     [SerializeField] Toggle toggle;
+
+    bool started;
     private void Awake()
     {
         new ManagerDeScene().Awake();
@@ -23,6 +25,11 @@ public class MainMenuScript : MonoBehaviour
 
     public void PressedPlay()
     {
+        if (started)
+            return;
+
+        started = true;
+
         SceneTransition.FadeToBlack(ManagerDeScene.LoadNextScene);
     }
 
