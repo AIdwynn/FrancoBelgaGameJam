@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e003ecbace3d9a48b57645a1ac56cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConfettiMode: 1
+  ConfettiHitParticle: {fileID: 8315892154402418237, guid: a44c355866c0f9041a0524987ba99f19,
+    type: 3}
   HitParticle: {fileID: 8315892154402418237, guid: 488dc8ca14e3ba74eb073b1353b46fde,
     type: 3}
   DeathParticle: {fileID: -1767442243315308054, guid: 4e2b841ca94c2cb428670348941aa585,
