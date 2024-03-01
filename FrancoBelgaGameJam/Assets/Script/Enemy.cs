@@ -18,6 +18,7 @@ public class Enemy : Lifeform
     [SerializeField] private float _attackRange;
 
     [Header("References")]
+    [SerializeField] AudioSource scream, attack;
     [SerializeField] GameObject distanceVisualizer, blood;
     [SerializeField] Transform head;
     [SerializeField] private bool _dieOnAttack;
@@ -44,6 +45,7 @@ public class Enemy : Lifeform
     public bool IsStunned { get; set; }
     public ParticleSelfDestruct StunnedParticle;
     public bool IsMoving { get { return !_agent.isStopped; } }
+    public bool ReviveNextTurn { get { return reviveNextTurn; } }
 
     #region UnityMethods
 
@@ -61,7 +63,10 @@ public class Enemy : Lifeform
             {
                 OnDeath?.Invoke();
             }
-            _attackState = EnemyAttackState.Not; };
+            _attackState = EnemyAttackState.Not;
+            _animator.SetTrigger("Attack");
+            attack.Play();
+        };
 
         OnChargingAttack += () => { _attackState = EnemyAttackState.Charging; };
 
@@ -87,7 +92,7 @@ public class Enemy : Lifeform
     {
         ManagerDeParticle.PlayParticleByName(ParticleNames.Hit, this.transform.position);
         base.Hurt();
-
+        GameManager.Instance.Cut();
         if (HP > 0 && head != null)
         {
             head.transform.localScale = Vector3.zero;
@@ -103,7 +108,6 @@ public class Enemy : Lifeform
         base.Die();
         ManagerDeParticle.PlayParticleByName(ParticleNames.Death, this.transform.position);
         GameManager.Instance.AddAmmo();
-        GameManager.Instance.Cut();
     }
 
     private void KillEnemy()
@@ -122,7 +126,8 @@ public class Enemy : Lifeform
 
     public void UpdateVisualizer()
     {
-        distanceVisualizer.SetActive(true);
+        if (!reviveNextTurn)
+            distanceVisualizer.SetActive(true);
 
         var dist = _maxTravelDistance * GameManager.Instance.VisualizerScaleOffset + _attackRange + GameManager.Instance.EnemyRangeOffset;
         distanceVisualizer.transform.position = transform.position + Vector3.up * -1;
@@ -152,7 +157,11 @@ public class Enemy : Lifeform
                 original.SetActive(true);
 
             blood.SetActive(true);
+
+            reviveNextTurn = false;
         }
+
+        scream.Play();
 
         float distanceEnemyPlayer = Vector3.Distance(transform.position, _player.transform.position);
 
@@ -209,6 +218,7 @@ public class Enemy : Lifeform
             switch (_attackState)
             {
                 case EnemyAttackState.Charging:
+
                     OnAttack?.Invoke();
                     break;
 
@@ -229,6 +239,7 @@ public class Enemy : Lifeform
             }
         }
 
+        scream.Stop();
         OnStop?.Invoke();
         _animator.SetBool("Moving", false);
 

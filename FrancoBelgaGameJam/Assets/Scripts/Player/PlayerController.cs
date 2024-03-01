@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using OToon;
 
 public class PlayerController : Lifeform
 {
@@ -19,7 +20,7 @@ public class PlayerController : Lifeform
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
-    [SerializeField] AudioSource pick, chicken;
+    [SerializeField] AudioSource pick, chicken, steps;
     private CameraController cameraController;
     private AbilitiesManager abilitiesManager;
 
@@ -34,7 +35,7 @@ public class PlayerController : Lifeform
     [HideInInspector] public bool Moving, Constrained, EndTurnAction;
     private float endActionAnticipation;
     private float endActionRecovery;
-    bool canHit, stuns;
+    bool canHit, stuns, ded;
     Lifeform endActionTarget;
 
     public event EventHandler RanOuttaMovement ;
@@ -61,6 +62,9 @@ public class PlayerController : Lifeform
 
     public void UpdatePlayer(bool constrain)
     {
+        if (ded)
+            return;
+
         if (EndTurnAction)
         {
             if (endActionAnticipation > 0)
@@ -110,7 +114,13 @@ public class PlayerController : Lifeform
                 }
                 else
                 {
+                    CanMove = false;
                     EndTurnAction = false;
+
+                    if (steps.isPlaying)
+                        steps.Stop();
+
+                    animator.SetBool("Moving", false);
                     GameManager.Instance.EndTurn();
                 }
             }
@@ -140,6 +150,9 @@ public class PlayerController : Lifeform
     {
         if (!CanMove)
         {
+            if (steps.isPlaying)
+                steps.Stop();
+
             animator.SetBool("Moving", false);
             return;
         }
@@ -150,7 +163,6 @@ public class PlayerController : Lifeform
         Vector3 right = Right * XInput;
 
         float moveSpeed = WalkSpeed;
-
 
         move = Vector3.Normalize(forward + right) * moveSpeed * Time.deltaTime;
 
@@ -173,6 +185,12 @@ public class PlayerController : Lifeform
             Moving = move.magnitude > 0;
         }
 
+        if (Moving && !steps.isPlaying)
+            steps.Play();
+
+        if (!Moving && steps.isPlaying)
+            steps.Stop();
+
         animator.SetBool("Moving", move.magnitude > 0);
         animator.SetFloat("MoveDir", Mathf.Sign(ZInput));
     }
@@ -194,6 +212,15 @@ public class PlayerController : Lifeform
 
     public void EndTurnAttack(string animation, float anticipation, float recovery)
     {
+        CanMove = false;
+        EndTurnAction = false;
+
+        if (steps.isPlaying)
+            steps.Stop();
+
+        animator.SetBool("Moving", false);
+
+
         EndTurnAction = true;
         canHit = true;
 
@@ -207,6 +234,15 @@ public class PlayerController : Lifeform
 
     public void EndTurnAttack(string animation, float anticipation, float recovery, Lifeform target, bool stuns)
     {
+        CanMove = false;
+        EndTurnAction = false;
+
+        if (steps.isPlaying)
+            steps.Stop();
+
+        animator.SetBool("Moving", false);
+
+
         EndTurnAction = true;
         canHit = true;
 
@@ -220,6 +256,7 @@ public class PlayerController : Lifeform
         canHit = true;
 
         this.stuns = stuns;
+
     }
 
     public void ResetAnimator()
@@ -267,6 +304,11 @@ public class PlayerController : Lifeform
 
         animator.SetTrigger("Die");
 
+        ded = true;
+        cameraController.gameObject.transform.SetParent(null, true);
+        cameraController.gameObject.AddComponent<Rigidbody>();
+        cameraController.gameObject.AddComponent<SphereCollider>();
+
         StartCoroutine(C_DeathDelay());
     }
 
@@ -277,7 +319,7 @@ public class PlayerController : Lifeform
 
     IEnumerator C_DeathDelay()
     {
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(3);
 
         GameManager.Instance.Restart();
     }
