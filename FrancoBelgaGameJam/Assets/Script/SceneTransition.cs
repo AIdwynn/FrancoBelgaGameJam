@@ -25,7 +25,7 @@ public class SceneTransition : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += (s,e) => OnSceneLoaded(new EventArgs());
         StartCoroutine(FadeFromBlack());
     }
 
@@ -53,10 +53,10 @@ public class SceneTransition : MonoBehaviour
 
     private void OnDestroy()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        ManagerDeScene.Instance.LoadedScene -= (s, e) => OnSceneLoaded(new EventArgs());
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(EventArgs args)
     {
         StartCoroutine(FadeFromBlack());
     }
