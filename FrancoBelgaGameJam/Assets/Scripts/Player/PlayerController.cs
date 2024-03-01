@@ -50,6 +50,32 @@ public class PlayerController : Lifeform
 
         cameraController.Init();
         abilitiesManager.Init(this);
+
+        var hurtScreen = GetComponentInChildren<CanvasGroup>();
+        hurtScreen.alpha = 0;
+        OnHurt.AddListener(() => { hurtScreen.alpha = 1;
+            StartCoroutine(FadeHurtScreen(hurtScreen));
+        });
+
+        OnDeath.AddListener(() => {
+            StopAllCoroutines();
+            hurtScreen.alpha = 1; });
+    }
+
+    private IEnumerator FadeHurtScreen(CanvasGroup hurtScreen)
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        var x = 1f;
+
+        while (x >= 0)
+        {
+            x -= Time.unscaledDeltaTime * 4;
+            yield return new WaitForSecondsRealtime(Time.unscaledDeltaTime * 4);
+            hurtScreen.alpha = x;
+        }
+
+        hurtScreen.alpha = 0;
     }
 
     public void TurnStart()
