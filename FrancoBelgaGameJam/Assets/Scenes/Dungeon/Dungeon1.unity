@@ -1271,10 +1271,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3607693406626149732, guid: 932d6c0d156d80c4f8a8bdd2afa6d4e6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.34
+      objectReference: {fileID: 0}
     - target: {fileID: 6922262520798589306, guid: 932d6c0d156d80c4f8a8bdd2afa6d4e6,
         type: 3}
       propertyPath: m_Name
       value: FinishRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515162001208379906, guid: 932d6c0d156d80c4f8a8bdd2afa6d4e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
