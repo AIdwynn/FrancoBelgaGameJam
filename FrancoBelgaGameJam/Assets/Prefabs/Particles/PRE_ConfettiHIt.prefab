@@ -44916,12 +44916,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -44931,6 +44936,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -45105,6 +45115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -45115,8 +45130,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -45165,6 +45185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -45176,12 +45201,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -45350,6 +45375,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -45360,8 +45390,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -45405,8 +45440,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -45416,6 +45461,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -45585,6 +45635,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -45595,8 +45650,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -45813,8 +45873,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -45824,6 +45894,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -45993,6 +46068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -46003,8 +46083,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -46053,6 +46138,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -46064,12 +46154,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -46238,6 +46328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -46248,8 +46343,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -46293,8 +46393,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -46304,6 +46414,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -46473,6 +46588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -46483,8 +46603,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -46702,12 +46827,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -46717,6 +46847,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -46891,6 +47026,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -46901,8 +47041,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -46951,6 +47096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -46962,12 +47112,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -47136,6 +47286,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -47146,8 +47301,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -47191,8 +47351,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -47202,6 +47372,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -47371,6 +47546,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -47381,8 +47561,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -47600,12 +47785,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -47615,6 +47805,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -47789,6 +47984,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -47799,8 +47999,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -47849,6 +48054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -47860,12 +48070,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48034,6 +48244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -48044,8 +48259,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48089,8 +48309,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48100,6 +48330,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -48269,6 +48504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -48279,8 +48519,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48497,8 +48742,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48508,6 +48763,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -48677,6 +48937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -48687,8 +48952,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48737,6 +49007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -48748,12 +49023,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48922,6 +49197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -48932,8 +49212,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48977,8 +49262,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -48988,6 +49283,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -49157,6 +49457,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -49167,8 +49472,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -49386,12 +49696,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -49401,6 +49716,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -49575,6 +49895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -49585,8 +49910,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -49635,6 +49965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -49646,12 +49981,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -49820,6 +50155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -49830,8 +50170,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -49875,8 +50220,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -49886,6 +50241,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -50055,6 +50415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -50065,8 +50430,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -50283,8 +50653,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -50294,6 +50674,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -50463,6 +50848,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -50473,8 +50863,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -50523,6 +50918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -50534,12 +50934,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -50708,6 +51108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -50718,8 +51123,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -50763,8 +51173,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -50774,6 +51194,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -50943,6 +51368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -50953,8 +51383,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -51181,12 +51616,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.scalar
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -51232,7 +51677,7 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.subEmitters.Array.data[0].type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -51351,6 +51796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].properties
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: InitialModule.startColor.maxGradient.m_ColorSpace
       value: 0
       objectReference: {fileID: 0}
@@ -51358,6 +51808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxGradient.m_NumColorKeys
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -51371,8 +51826,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -51421,6 +51881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -51432,12 +51897,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -51606,6 +52071,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -51616,8 +52086,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -51661,8 +52136,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -51672,6 +52157,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -51841,6 +52331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -51851,8 +52346,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52070,12 +52570,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52085,6 +52590,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -52259,6 +52769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -52269,8 +52784,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52319,6 +52839,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -52330,12 +52855,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52504,6 +53029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -52514,8 +53044,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52559,8 +53094,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52570,6 +53115,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -52739,6 +53289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -52749,8 +53304,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52968,12 +53528,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -52983,6 +53548,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -53157,6 +53727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -53167,8 +53742,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -53217,6 +53797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -53228,12 +53813,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -53402,6 +53987,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -53412,8 +54002,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -53457,8 +54052,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -53468,6 +54073,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -53637,6 +54247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -53647,8 +54262,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -53866,12 +54486,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -53881,6 +54506,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -54055,6 +54685,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -54065,8 +54700,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -54115,6 +54755,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -54126,12 +54771,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -54300,6 +54945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -54310,8 +54960,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -54355,8 +55010,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -54366,6 +55031,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -54535,6 +55205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -54545,8 +55220,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -54764,12 +55444,17 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: SubModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -54779,6 +55464,11 @@ PrefabInstance:
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -54953,6 +55643,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -54963,8 +55658,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010219076908, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -55013,6 +55713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
       objectReference: {fileID: 0}
@@ -55024,12 +55729,12 @@ PrefabInstance:
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0.02
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -55198,6 +55903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -55208,8 +55918,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000010745951568, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -55253,8 +55968,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: SubModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: startDelay.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
@@ -55264,6 +55989,11 @@ PrefabInstance:
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
       propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
@@ -55433,6 +56163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[1].value
       value: -1
       objectReference: {fileID: 0}
@@ -55443,8 +56178,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
+        type: 3}
       propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198000012373144180, guid: d32aa916f50cac94db11e6f19821a58f,
         type: 3}
