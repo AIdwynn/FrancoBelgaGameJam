@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParticleLoader : MonoBehaviour
 {
-    public bool ConfettiMode = true;
+    public static bool ConfettiMode = true;
     [SerializeField] private ParticleSelfDestruct ConfettiHitParticle;
     [SerializeField] private ParticleSelfDestruct HitParticle;
     [SerializeField] private ParticleSelfDestruct DeathParticle;
