@@ -64,7 +64,8 @@ public class PlayerTurn : Turn
         {
             distanceVisualizer.SetActive(false);
             player.Freeze();
-            
+            player.CanQuickSkip();
+            GameManager.UIManager.ShowQuickSkip(true);
         }
     }
 

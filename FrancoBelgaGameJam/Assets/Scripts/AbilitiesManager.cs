@@ -27,6 +27,8 @@ public class AbilitiesManager : MonoBehaviour
     private string currentItemName;
     private int originalAmmo;
 
+    [HideInInspector] public bool CanQuickSkip;
+
     public void Init(PlayerController p)
     {
         player = p;
@@ -47,6 +49,15 @@ public class AbilitiesManager : MonoBehaviour
 
         if (current == null)
             return;
+
+        if (CanQuickSkip && Input.GetKeyDown(KeyCode.Space))
+        {
+            CanQuickSkip = false;
+            current = abilities[2];
+            player.EndTurnAttack(current.Name, current.anticipation, current.recovery);
+            GameManager.Instance.UIManager.ShowQuickSkip(false);
+            return;
+        }
 
         bool canUse = false;
         bool isZap = Array.IndexOf(abilities, current) == 1;

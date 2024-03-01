@@ -245,6 +245,11 @@ public class PlayerController : Lifeform
         controller.Move(velocity * Time.deltaTime);
     }
 
+    public void CanQuickSkip()
+    {
+        abilitiesManager.CanQuickSkip = true;
+    }
+
     public void EndTurnAttack(string animation, float anticipation, float recovery)
     {
         CanMove = false;

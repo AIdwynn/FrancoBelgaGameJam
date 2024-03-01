@@ -9,12 +9,17 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI turnText, zapText;
+    [SerializeField] TextMeshProUGUI turnText, zapText, quickSkipText;
     [SerializeField] Transform hpIconParent;
     [SerializeField] GameObject hpIcon;
     [SerializeField] RectTransform movementSlider;
     [SerializeField] SkillIcon[] icons;
     [SerializeField] Color ready, unusable, disabled;
+
+    private void Awake()
+    {
+        quickSkipText.DOFade(0, 0.01f);
+    }
 
     public void UpdateHP(int value)
     {
@@ -58,6 +63,14 @@ public class UIManager : MonoBehaviour
     {
         var sizeDelta = movementSlider.offsetMax;
         movementSlider.offsetMax = new Vector2( -(currentDistanceTraveled / GameManager.Instance.MaxPlayerDistance) * 150, sizeDelta.y);
+    }
+
+    public void ShowQuickSkip(bool show)
+    {
+        if (show)
+            quickSkipText.DOFade(1, 1f);
+        else
+            quickSkipText.DOFade(0, 1f);
     }
 
     #region Items
