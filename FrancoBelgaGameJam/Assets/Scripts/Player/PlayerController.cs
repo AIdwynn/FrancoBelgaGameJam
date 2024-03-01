@@ -345,9 +345,9 @@ public class PlayerController : Lifeform
 
     IEnumerator C_DeathDelay()
     {
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(2);
 
-        GameManager.Instance.Restart();
+        SceneTransition.FadeToBlack(ManagerDeScene.RestartCurrentScene);
     }
 
     private void InitializeMoveDir()
