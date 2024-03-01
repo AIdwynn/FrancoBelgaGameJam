@@ -35,7 +35,7 @@ public class PlayerController : Lifeform
     [HideInInspector] public bool Moving, Constrained, EndTurnAction;
     private float endActionAnticipation;
     private float endActionRecovery;
-    bool canHit, stuns, ded;
+    bool canHit, stuns, ded, endTurn;
     Lifeform endActionTarget;
 
     public event EventHandler RanOuttaMovement ;
@@ -125,6 +125,8 @@ public class PlayerController : Lifeform
                         var dir = Vector3.Normalize(endActionTarget.transform.position - abilitiesManager.weaponsParent.position);
                         ManagerDeParticle.PlayParticleByName(ParticleNames.Taser, 
                             abilitiesManager.weaponsParent.position + Vector3.up * 0.2f, Quaternion.Euler(0, 90, 0) * dir);
+
+                        endTurn = false;
                     }
                     else
                     {
@@ -138,16 +140,23 @@ public class PlayerController : Lifeform
                 {
                     endActionRecovery -= Time.deltaTime;
                 }
-                else
+                else 
                 {
-                    CanMove = false;
                     EndTurnAction = false;
+                    if (endTurn)
+                    {
+                        CanMove = false;
 
-                    if (steps.isPlaying)
-                        steps.Stop();
+                        if (steps.isPlaying)
+                            steps.Stop();
 
-                    animator.SetBool("Moving", false);
-                    GameManager.Instance.EndTurn();
+                        animator.SetBool("Moving", false);
+                        GameManager.Instance.EndTurn();
+                    }
+                    else
+                    {
+                        CanMove = true;
+                    }
                 }
             }
 
@@ -256,6 +265,7 @@ public class PlayerController : Lifeform
         animator.SetTrigger(animation);
 
         canHit = false;
+        endTurn = true;
     }
 
     public void EndTurnAttack(string animation, float anticipation, float recovery, Lifeform target, bool stuns)
@@ -282,7 +292,7 @@ public class PlayerController : Lifeform
         canHit = true;
 
         this.stuns = stuns;
-
+        endTurn = true;
     }
 
     public void ResetAnimator()
