@@ -52,6 +52,7 @@ public class AbilitiesManager : MonoBehaviour
         bool isZap = Array.IndexOf(abilities, current) == 1;
         var UIManager = GameManager.Instance.UIManager;
         RaycastHit hit = new RaycastHit();
+        RaycastHit wallHit = new RaycastHit();
 
         if (current.alwaysActive)
         {
@@ -61,15 +62,15 @@ public class AbilitiesManager : MonoBehaviour
         else
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            bool hitWall = Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist / 2, ray.direction, out wallHit, current.range, whatAreWalls);
 
-            if (!Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist/2, ray.direction, out hit, current.range, whatAreWalls))
+            if (isZap)
             {
-                if (isZap)
+                if (CheckForZap())
                 {
-                    if (CheckForZap())
+                    if (Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
                     {
-
-                        if (Physics.SphereCast(ray.origin - ray.direction * 2f, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                        if (Vector3.Distance(transform.position, wallHit.point) >= Vector3.Distance(transform.position, hit.point) || !hitWall)
                         {
                             UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
                             canUse = true;
@@ -79,10 +80,17 @@ public class AbilitiesManager : MonoBehaviour
                             UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
                         }
                     }
+                    else
+                    {
+                        UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                    }
                 }
-                else
+            }
+            else
+            {
+                if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
                 {
-                    if (Physics.SphereCast(ray.origin, current.aimAssist, ray.direction, out hit, current.range, enemiesLayer))
+                    if (Vector3.Distance(transform.position, wallHit.point) >= Vector3.Distance(transform.position, hit.point) || !hitWall)
                     {
                         UIManager.ChangeIconState(currentItemName, AbilityState.Ready);
                         canUse = true;
@@ -92,7 +100,12 @@ public class AbilitiesManager : MonoBehaviour
                         UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
                     }
                 }
+                else
+                {
+                    UIManager.ChangeIconState(currentItemName, AbilityState.Unusable);
+                }
             }
+
         }
 
         if (canUse && Input.GetMouseButtonDown(0))
